@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Deliverino</title>
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <link rel="stylesheet" href="css/owl.carousel.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+  </head>
+  <body onload="init_index()">
+    <!-- Header section -->
+    <header style="background-color: black   ">
+      <div class="header-warp">
+        <div class="site-logo">
+          <!--TODO rename new index to index-->
+          <h2>
+            <a style="color : white" href="index.html"
+              >Deliverino<span>.</span></a
+            >
+          </h2>
+        </div>
+        <!-- responsive -->
+        <div class="nav-switch">
+          <i class="fa fa-bars"></i>
+        </div>
+        <!-- menu -->
+        <ul class="main-menu">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li>
+            <a href="#">
+              Restaurants
+            </a>
+            <!--
+            <div class="dropdown-menu">
+              <a class="dropdown-item" style="color:black; margin:0" href="#">New Belgrade</a>
+              <a class="dropdown-item" style="color:black; margin:0" href="#">Zvezdara</a>
+              <a class="dropdown-item" style="color:black; margin:0" href="#">Palilula</a>
+              <a class="dropdown-item" style="color:black; margin:0" href="#">Zemun</a>
+            </div>
+            -->
+          </li>
+          <li><a href="#">Delivery</a></li>
+          <li><a href="#">My orders</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+              <a class="btn dropdown-toggle" href="#" role="button" id="language_picker" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Language
+              </a>
+
+            <div class="dropdown-menu">
+              <a class="dropdown-item" style="color:black; margin:0" href="#">English</a>
+              <a class="dropdown-item" style="color:black; margin:0" href="index.html">Srpski</a>
+            </div>
+            </li>
+        </ul>
+      </div>
+    </header>
+    <!-- Header section end -->
+
+    <!-- Hero section -->
+    <section class="hero-section">
+      <div class="hero-slider owl-carousel">
+        <div class="hs-item set-bg" data-setbg="img/slider/slider-1.jpg">
+          <div class="hs-content">
+            <div class="hsc-warp">
+              <h2>Quick delivery<span>.</span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="hs-item set-bg" data-setbg="img/slider/slider-2.jpg">
+          <div class="hs-content">
+            <div class="hsc-warp">
+              <h2>Delicious food<span>.</span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="hs-item set-bg" data-setbg="img/slider/slider-3.jpg">
+          <div class="hs-content">
+            <div class="hsc-warp">
+              <h2>Low prices<span>.</span></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero section end -->
+
+    <!-- Testimonials section -->
+    <section
+      class="testimonials-section spad pb-0 set-bg"
+      data-setbg="img/review-bg.jpg"
+    >
+      <div class="container">
+        <div class="section-title text-white">
+          <i class="flaticon-020-ice-cream"></i>
+          <h2>Comments</h2>
+        </div>
+        <div class="testimonials-slider owl-carousel">
+          <div class="ts-item text-white">
+            <div class="quota">“</div>
+            <p>
+              U nekoliko recenica iskenjati komentar nekog klijenta tako da
+              zvuci ubedljivo, tipa zasto koristiti nas servis i sta je tolko
+              dobro
+            </p>
+            <h6><span>Marko Stefanovic</span>, Admin</h6>
+          </div>
+          <div class="ts-item text-white">
+            <div class="quota">“</div>
+            <p>
+              Integer sed facilisis eros. In iaculis rhoncus velit in malesuada.
+              In hac habitasse platea dictumst. Fusce erat ex, consectetur sit
+              amet ornare suscipit, porta et erat. Donec nec nisi in nibh
+              commodo laoreet. Mauris dapibus justo ut feugiat malesuada. Fusce
+              ultricies ante tortor, non vestibulum est feu-giat ut.
+            </p>
+            <h6><span>Ted Chapman</span>, Client</h6>
+          </div>
+          <div class="ts-item text-white">
+            <div class="quota">“</div>
+            <p>
+              Integer sed facilisis eros. In iaculis rhoncus velit in malesuada.
+              In hac habitasse platea dictumst. Fusce erat ex, consectetur sit
+              amet ornare suscipit, porta et erat. Donec nec nisi in nibh
+              commodo laoreet. Mauris dapibus justo ut feugiat malesuada. Fusce
+              ultricies ante tortor, non vestibulum est feu-giat ut.
+            </p>
+            <h6><span>Ted Chapman</span>, Client</h6>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonials section end -->
+
+    <!--This div is here to leave place for some banners on the side -->
+    <div class="offset-sm-3 col-sm-6">
+      <!-- Services section -->
+      <section class="services-section spad">
+        <div class="container">
+          <div class="section-title">
+            <i class="flaticon-022-tray"></i>
+            <h2>Najbolji restorani</h2>
+          </div>
+          <div class="row services">
+            <div class="col-sm-4 service-item">
+              <img class="best_image" id="top1_image" />
+              <h3 id="top1_name"></h3>
+              <p id="top1_desc"></p>
+            </div>
+            <div class="col-sm-4 service-item">
+              <img class="best_image" id="top2_image" />
+              <h3 id="top2_name"></h3>
+              <p id="top2_desc"></p>
+            </div>
+            <div class="col-sm-4    service-item">
+              <img class="best_image" id="top3_image" />
+              <h3 id="top3_name"></h3>
+              <p id="top3_desc"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Services section end -->
+    </div>
+
+    <!-- Footer section -->
+    <footer class="footer-section">
+      <div class="footer-bg-area set-bg" data-setbg="img/footer-bg.jpg">
+        <div class="copyright">
+          <p>
+            Copyright
+            <br />
+            2019
+            <br />
+            Nenad Bauk and Marko Stefanovic
+            <br />
+            Odsek za softversko inzenjerstvo Elektrotehnickog fakulteta
+            <br />
+            Univerziteta u Beogradu
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer section end -->
+
+    <!--====== Javascripts & Jquery ======-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/circle-progress.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
