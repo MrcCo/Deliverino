@@ -159,7 +159,6 @@ $(window).on("load", function() {
 /* Initialize restaurants */
 function init_index() {
   var restaurants = [];
-  window.alert("Initi index called");
   //first load
   if (localStorage.getItem("init_finished") == null) {
     //flag that restaurants are already initialized
@@ -463,7 +462,6 @@ function restaurant_load(name){
       if(restaurants[i].name == name){
           restaurant = restaurants[i];
           meal_count = restaurant.meals.length;
-          window.alert(meal_count);        
           break;
       }
 
