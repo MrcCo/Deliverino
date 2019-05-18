@@ -159,7 +159,7 @@ $(window).on("load", function() {
 /* Initialize restaurants */
 function init_index() {
   var restaurants = [];
-
+  // window.alert("Initi index called");
   //first load
   if (localStorage.getItem("init_finished") == null) {
     //flag that restaurants are already initialized
@@ -176,7 +176,37 @@ function init_index() {
       img: "img/logo/atos.jpeg", //lokacija slike
       desc: "Lep restoran", //opis restorana
       page: "atos.html",
-      page_en: "atos.html"
+      page_en: "atos.html",
+      meals : [
+        {
+          "name" : "Teleca corba",
+          "price" : 350  
+        },
+        {
+          "name" : "Teleca corba",
+          "price" : 350  
+        },
+        {
+          "name" : "Teleca corba",
+          "price" : 350  
+        },
+        {
+          "name" : "Teleca corba",
+          "price" : 350  
+        },
+        {
+          "name" : "Teleca corba",
+          "price" : 350  
+        },
+        {
+          "name" : "Teleca corba",
+          "price" : 350  
+        },
+        {
+          "name" : "Teleca corba",
+          "price" : 350  
+        }
+      ]
     };
     restaurants.push(Atos);
 
@@ -189,7 +219,44 @@ function init_index() {
       img: "img/logo/cheznik.jpg", //lokacija slike
       desc: "Lep restoran", //opis restorana
       page: "nik.html",
-      page_en: "nik.html"
+      page_en: "nik.html",
+      meals : [
+        {
+          "name" : "Teleca corba",
+          "price" : 350,
+          "desc" : "Tasty"  
+        },
+        {
+          "name" : "Teleca corba",
+          "price" : 350,
+          "desc" : "Tasty"  
+        },
+        {
+          "name" : "Teleca corba",
+          "price" : 350,
+          "desc" : "Tasty"  
+        },
+        {
+          "name" : "Teleca corba",
+          "price" : 350,
+          "desc" : "Tasty"  
+        },
+        {
+          "name" : "Teleca corba",
+          "price" : 350,  
+          "desc" : "Tasty"
+        },
+        {
+          "name" : "Teleca corba",
+          "price" : 350,  
+          "desc" : "Tasty"
+        },
+        {
+          "name" : "Teleca corba",
+          "price" : 350,
+          "desc" : "Tasty" 
+        }
+      ]
     };
     restaurants.push(ChezNik);
 
@@ -202,7 +269,44 @@ function init_index() {
       img: "img/logo/frans.jpg", //lokacija slike
       desc: "Lep restoran", //opis restorana
       page: "frans.html",
-      page_en: "frans.html"
+      page_en: "frans.html",
+      meals : [
+        {
+          "name" : "Teleca corba",
+          "price" : 350,
+          "desc" : "Tasty"  
+        },
+        {
+          "name" : "Teleca corba",
+          "price" : 350,
+          "desc" : "Tasty"  
+        },
+        {
+          "name" : "Teleca corba",
+          "price" : 350,
+          "desc" : "Tasty"  
+        },
+        {
+          "name" : "Teleca corba",
+          "price" : 350,
+          "desc" : "Tasty"  
+        },
+        {
+          "name" : "Teleca corba",
+          "price" : 350,  
+          "desc" : "Tasty"
+        },
+        {
+          "name" : "Teleca corba",
+          "price" : 350,  
+          "desc" : "Tasty"
+        },
+        {
+          "name" : "Teleca corba",
+          "price" : 350,
+          "desc" : "Tasty" 
+        }
+      ]
     };
     restaurants.push(Frans);
 
@@ -215,7 +319,44 @@ function init_index() {
       img: "img/logo/soibiber.jpg", //lokacija slike
       desc: "Lep restoran", //opis restorana
       page: "biber.html",
-      page_en: "biber.html"
+      page_en: "biber.html",
+      meals : [
+        {
+          "name" : "Teleca corba",
+          "price" : 350,
+          "desc" : "Tasty"  
+        },
+        {
+          "name" : "Teleca corba",
+          "price" : 350,
+          "desc" : "Tasty"  
+        },
+        {
+          "name" : "Teleca corba",
+          "price" : 350,
+          "desc" : "Tasty"  
+        },
+        {
+          "name" : "Teleca corba",
+          "price" : 350,
+          "desc" : "Tasty"  
+        },
+        {
+          "name" : "Teleca corba",
+          "price" : 350,  
+          "desc" : "Tasty"
+        },
+        {
+          "name" : "Teleca corba",
+          "price" : 350,  
+          "desc" : "Tasty"
+        },
+        {
+          "name" : "Teleca corba",
+          "price" : 350,
+          "desc" : "Tasty" 
+        }
+      ]
     };
     restaurants.push(SoIBiber);
 
@@ -233,13 +374,15 @@ function init_index() {
 /* sort restaurants by avg */
 function sort_by_avg(restaurants) {
   for (var i = 0; i < restaurants.length; i++) {
+    for (var j = i + 1; j < restaurants.length; j++) {
     var avg_i = 0;
     if (restaurants[i].count > 0)
       avg_i = restaurants[i].sum / restaurants[i].count;
-    for (var j = i + 1; j < restaurants.length; j++) {
-      var avg_j = 0;
-      if (restaurants[j].count > 0)
-        avg_j = restaurants[j].sum / restaurants[j].count;
+    var avg_j = 0;
+    if (restaurants[j].count > 0)
+      avg_j = restaurants[j].sum / restaurants[j].count;
+
+      // console.log(restaurants[i].name, restaurants[j].name, avg_i, avg_j);
       if (avg_i < avg_j) {
         var temp = restaurants[i];
         restaurants[i] = restaurants[j];
@@ -309,7 +452,7 @@ function getStarRating(id) {
 }
 
 
-function create_body(){
+function restaurants_create_body(){
   var restaurants = JSON.parse(localStorage.getItem("restaurants"));
   var html_to_insert = "";
 
@@ -329,9 +472,88 @@ function create_body(){
     if(i % 2 == 1){
      html_to_insert +="</div>";
     }                
-     
   }
+
+  if(restaurants.length % 2 == 1){
+    html_to_insert +="</div>";
+  }
+
+  
   html_to_insert +="</div>";
   document.getElementById("main_tag").innerHTML = html_to_insert;
 
 }
+
+
+function restaurant_load(name){
+
+  var html_to_insert = "";
+  var restaurants = JSON.parse(localStorage.getItem("restaurants"));
+  var restaurant;
+  var meal_count;
+
+  //add restaurant name to the breadcrumb
+  document.getElementById("bc_restaurant").innerHTML = name;
+
+  //get data bout the restaurant
+  for(var i = 0; i < restaurants.length; i++){
+      
+      if(restaurants[i].name == name){
+          restaurant = restaurants[i];
+          meal_count = restaurant.meals.length;
+          window.alert(meal_count);        
+          break;
+      }
+
+  }
+
+  //just in case 
+  if(restaurant != null){
+    
+    var first_col_count = Math.ceil(meal_count/2);
+    var secound_col_count = meal_count - first_col_count;
+
+    //insert container
+    html_to_insert = html_to_insert + "<div class=\"container\"> <div class=\"section-title text-white\">	<i class=\"flaticon-022-tray\"></i>	<h2>Our Menu</h2> </div>";
+
+    //menu tab nav
+    html_to_insert = html_to_insert + 
+    "<div class=\"tab-content menu-tab-content\"> <div class=\"tab-pane fade show active\" id=\"tab-1\" role=\"tabpanel\" aria-labelledby=\"tab-1\"> <div class=\"row\"> <div class=\"col-lg-6\">";
+    
+    //adding menu items
+    for(var i = 0; i < first_col_count; i++){
+      html_to_insert = html_to_insert +  
+      "<div class=\"menu-item\"> <h5>" + restaurant.meals[i].name + "</h5> <div class=\"mi-meta\">" + 
+      "<p>" + restaurant.meals[i].desc + "</p>" + 
+			"<div class=\"menu-price\">" + restaurant.meals[i].price + "</div> </div> </div>";
+    }
+
+    //add row break
+    html_to_insert = html_to_insert + "</div> <div class=\"col-lg-6\">";
+
+    //adding more menu items
+    for(var i = first_col_count; i < meal_count; i++){
+      html_to_insert = html_to_insert +  
+      "<div class=\"menu-item\">" +
+      "<h5 onclick = add_item(" + restaurant.meals[i].name + "," + restaurant.meals[i].price + "," + restaurant.name + ")>"+
+      + restaurant.meals[i].name + "</h5> <div class=\"mi-meta\">" + 
+      "<p>" + restaurant.meals[i].desc + "</p>" + 
+			"<div class=\"menu-price\">" + restaurant.meals[i].price + "</div> </div> </div>";
+    }
+
+    //closing tags
+    html_to_insert = html_to_insert + 
+    "</div> </div> </div> </div> ";
+
+
+    document.getElementById("menu").innerHTML = html_to_insert;
+  }else{
+      window.alert("Ne postoji restoran!!!");
+  }
+}
+
+//add item to local storage on index - restaurant 
+//todo finish this
+function add_item(item, cost, restaurant){
+  window.alert("Narucio " + item + " from " + restaurant + "for" + cost +"dinars");
+} 
