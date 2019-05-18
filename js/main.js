@@ -169,45 +169,53 @@ function init_index() {
     //TODO add more restaurants
     var Atos = {
       name: "Atos", //ime restorana
-      sum: 18, //suma ocena
-      count: 4, //broj ocena (da bi smo mogli nakon ocenjivanja da racunamo prosek)
+      sum: 0, //suma ocena
+      count: 0, //broj ocena (da bi smo mogli nakon ocenjivanja da racunamo prosek)
       mun: "Novi Beograd", //opstina
       adr: "Adresa",
       img: "img/logo/atos.jpeg", //lokacija slike
-      desc: "Lep restoran" //opis restorana
+      desc: "Lep restoran", //opis restorana
+      page: "#",
+      page_en: "#"
     };
     restaurants.push(Atos);
 
     var ChezNik = {
       name: "Chez Nik", //ime restorana
-      sum: 14, //suma ocena
-      count: 3, //broj ocena (da bi smo mogli nakon ocenjivanja da racunamo prosek)
+      sum: 0, //suma ocena
+      count: 0, //broj ocena (da bi smo mogli nakon ocenjivanja da racunamo prosek)
       mun: "Novi Beograd", //opstina
       adr: "Adresa",
       img: "img/logo/cheznik.jpg", //lokacija slike
-      desc: "Lep restoran" //opis restorana
+      desc: "Lep restoran", //opis restorana
+      page: "#",
+      page_en: "#"
     };
     restaurants.push(ChezNik);
 
     var Frans = {
       name: "Frans", //ime restorana
-      sum: 25, //suma ocena
-      count: 5, //broj ocena (da bi smo mogli nakon ocenjivanja da racunamo prosek)
+      sum: 0, //suma ocena
+      count: 0, //broj ocena (da bi smo mogli nakon ocenjivanja da racunamo prosek)
       mun: "Vracar", //opstina
       adr: "Adresa",
       img: "img/logo/frans.jpg", //lokacija slike
-      desc: "Lep restoran" //opis restorana
+      desc: "Lep restoran", //opis restorana
+      page: "#",
+      page_en: "#"
     };
     restaurants.push(Frans);
 
     var SoIBiber = {
       name: "So i biber", //ime restorana
-      sum: 18, //suma ocena
-      count: 6, //broj ocena (da bi smo mogli nakon ocenjivanja da racunamo prosek)
+      sum: 0, //suma ocena
+      count: 0, //broj ocena (da bi smo mogli nakon ocenjivanja da racunamo prosek)
       mun: "Novi Beograd", //opstina
       adr: "Adresa",
       img: "img/logo/soibiber.jpg", //lokacija slike
-      desc: "Lep restoran" //opis restorana
+      desc: "Lep restoran", //opis restorana
+      page: "#",
+      page_en: "#"
     };
     restaurants.push(SoIBiber);
 
@@ -225,9 +233,13 @@ function init_index() {
 /* sort restaurants by avg */
 function sort_by_avg(restaurants) {
   for (var i = 0; i < restaurants.length; i++) {
-    var avg_i = restaurants[i].sum / restaurants[i].count;
+    var avg_i = 0;
+    if (restaurants[i].count > 0)
+      avg_i = restaurants[i].sum / restaurants[i].count;
     for (var j = i + 1; j < restaurants.length; j++) {
-      var avg_j = restaurants[j].sum / restaurants[j].count;
+      var avg_j = 0;
+      if (restaurants[j].count > 0)
+        avg_j = restaurants[j].sum / restaurants[j].count;
       if (avg_i < avg_j) {
         var temp = restaurants[i];
         restaurants[i] = restaurants[j];
@@ -258,28 +270,46 @@ function load_top_restaurants() {
   var top3_desc = restaurants[2].desc;
 
   document.getElementById("top1_image").src = top1_img;
-  document.getElementById("top1_name").innerHTML = top1_name;
+  document.getElementById("top1_link").innerHTML = top1_name;
   document.getElementById("top1_desc").innerHTML = top1_desc;
 
   document.getElementById("top2_image").src = top2_img;
-  document.getElementById("top2_name").innerHTML = top2_name;
+  document.getElementById("top2_link").innerHTML = top2_name;
   document.getElementById("top2_desc").innerHTML = top2_desc;
 
   document.getElementById("top3_image").src = top3_img;
-  document.getElementById("top3_name").innerHTML = top3_name;
+  document.getElementById("top3_link").innerHTML = top3_name;
   document.getElementById("top3_desc").innerHTML = top3_desc;
+}
+
+function addRating(id, rating)
+{
+  var restaurants = JSON.parse(localStorage.getItem("restaurants"));
+
+  restaurants[id]['sum'] += rating;
+  restaurants[id]['count'] += 1;
+
+  localStorage.setItem("restaurants", JSON.stringify(restaurants));
+}
+
+function getStarRating(id) {
+  return "<fieldset class=\"rating\"> \
+  <input type=\"radio\" id=\"star5_" + id + "\" name=\"rating\" value=\"5\" onclick=\"addRating(" + id + ",5)\" /><label class = \"full\" for=\"star5_" + id + "\" title=\"Awesome - 5 stars\"></label> \
+  <input type=\"radio\" id=\"star4_" + id + "\" name=\"rating\" value=\"4\" onclick=\"addRating(" + id + ",4)\" /><label class = \"full\" for=\"star4_" + id + "\" title=\"Pretty good - 4 stars\"></label> \
+  <input type=\"radio\" id=\"star3_" + id + "\" name=\"rating\" value=\"3\" onclick=\"addRating(" + id + ",3)\" /><label class = \"full\" for=\"star3_" + id + "\" title=\"Meh - 3 stars\"></label> \
+  <input type=\"radio\" id=\"star2_" + id + "\" name=\"rating\" value=\"2\" onclick=\"addRating(" + id + ",2)\" /><label class = \"full\" for=\"star2_" + id + "\" title=\"Kinda bad - 2 stars\"></label> \
+  <input type=\"radio\" id=\"star1_" + id + "\" name=\"rating\" value=\"1\" onclick=\"addRating(" + id + ",1)\" /><label class = \"full\" for=\"star1_" + id + "\" title=\"Sucks big time - 1 star\"></label> \
+</fieldset>";
 }
 
 
 function create_body(){
-
   var restaurants = JSON.parse(localStorage.getItem("restaurants"));
   var html_to_insert = "";
 
   html_to_insert =  html_to_insert + 
                       "<div class = \"offset-sm-2 col-sm-8\" >";
   for(var i = 0; i < restaurants.length; i++){
-
     if(i % 2 == 0){                  
      html_to_insert +="<div class = \"row\">"
     }
@@ -287,8 +317,8 @@ function create_body(){
                       "<img src = \"" + restaurants[i].img + "\" style=\"height: 100px\">"+
                       "</div>"+
                       "<div class = \"col-sm-4\" style =\"padding : 10px\">" +
-                      "<h3 class = \"text-left\">" +restaurants[i].name + "</h3><br/>" +
-                      "<p class = \"text-left\">" + restaurants[i].desc + "</p>" + 
+                      "<h3 class = \"text-left\"><a href=\"" + restaurants[i].page + "\">" +restaurants[i].name + "</a></h3><br/>" +
+                      "<p class = \"text-left\">" + restaurants[i].desc + "</p><br>" + getStarRating(i) +
                       "</div>";
     if(i % 2 == 1){
      html_to_insert +="</div>";
