@@ -175,8 +175,8 @@ function init_index() {
       adr: "Adresa",
       img: "img/logo/atos.jpeg", //lokacija slike
       desc: "Lep restoran", //opis restorana
-      page: "#",
-      page_en: "#"
+      page: "atos.html",
+      page_en: "atos.html"
     };
     restaurants.push(Atos);
 
@@ -188,8 +188,8 @@ function init_index() {
       adr: "Adresa",
       img: "img/logo/cheznik.jpg", //lokacija slike
       desc: "Lep restoran", //opis restorana
-      page: "#",
-      page_en: "#"
+      page: "nik.html",
+      page_en: "nik.html"
     };
     restaurants.push(ChezNik);
 
@@ -201,8 +201,8 @@ function init_index() {
       adr: "Adresa",
       img: "img/logo/frans.jpg", //lokacija slike
       desc: "Lep restoran", //opis restorana
-      page: "#",
-      page_en: "#"
+      page: "frans.html",
+      page_en: "frans.html"
     };
     restaurants.push(Frans);
 
@@ -214,8 +214,8 @@ function init_index() {
       adr: "Adresa",
       img: "img/logo/soibiber.jpg", //lokacija slike
       desc: "Lep restoran", //opis restorana
-      page: "#",
-      page_en: "#"
+      page: "biber.html",
+      page_en: "biber.html"
     };
     restaurants.push(SoIBiber);
 
@@ -260,25 +260,31 @@ function load_top_restaurants() {
   var top1_img = restaurants[0].img;
   var top1_name = restaurants[0].name;
   var top1_desc = restaurants[0].desc;
+  var top1_page = restaurants[0].page;
 
   var top2_img = restaurants[1].img;
   var top2_name = restaurants[1].name;
   var top2_desc = restaurants[1].desc;
+  var top2_page = restaurants[1].page;
 
   var top3_img = restaurants[2].img;
   var top3_name = restaurants[2].name;
   var top3_desc = restaurants[2].desc;
+  var top3_page = restaurants[2].page;
 
   document.getElementById("top1_image").src = top1_img;
   document.getElementById("top1_link").innerHTML = top1_name;
+  document.getElementById("top1_link").href = top1_page;
   document.getElementById("top1_desc").innerHTML = top1_desc;
 
   document.getElementById("top2_image").src = top2_img;
   document.getElementById("top2_link").innerHTML = top2_name;
+  document.getElementById("top2_link").href = top2_page;
   document.getElementById("top2_desc").innerHTML = top2_desc;
 
   document.getElementById("top3_image").src = top3_img;
   document.getElementById("top3_link").innerHTML = top3_name;
+  document.getElementById("top3_link").href = top3_page;
   document.getElementById("top3_desc").innerHTML = top3_desc;
 }
 
