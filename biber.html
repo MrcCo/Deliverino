@@ -4,8 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>So i Biber - Deliverino</title>
+    <title>Frans -Deliverino</title>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Deliverino</title>
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <link rel="stylesheet" href="css/owl.carousel.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+
 </head>
-<body>
+<body onload = "restaurant_load('So i Biber')">
+
+    <!-- Header section -->
+    <header style="background-color: black">
+        <div class="header-warp">
+          <div class="site-logo">
+            <!--TODO rename new index to index-->
+            <h2>
+              <a style="color : white" href="index.html">Deliverino<span>.</span></a>
+            </h2>
+          </div>
+          <!-- responsive -->
+          <div class="nav-switch">
+            <i class="fa fa-bars"></i>
+          </div>
+          <!-- menu -->
+          <ul class="main-menu">
+            <li><a href="index.html">Pocetna</a></li>
+            <li><a href="about.html">O nama</a></li>
+            <li>
+              <a href="restaurants.html" class="active">
+                Restorani
+              </a>
+              <!-- not supposed to be like this :( 
+              <div class="dropdown-menu">
+                <a class="dropdown-item" style="color:black; margin:0" href="novi_beograd.html">Novi Beograd</a>
+                <a class="dropdown-item" style="color:black; margin:0" href="#">Zvezdara</a>
+                <a class="dropdown-item" style="color:black; margin:0" href="#">Palilula</a>
+                <a class="dropdown-item" style="color:black; margin:0" href="#">Zemun</a>
+              </div>
+              -->
+            </li>
+            <li><a href="#">Dostava</a></li>
+            <li><a href="#">Moje narudzbine</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+            <li>
+              <a class="btn dropdown-toggle" href="#" role="button" id="language_picker" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Jezik
+              </a>
+  
+              <div class="dropdown-menu" >
+                <a class="dropdown-item" style="color:black; margin:0" href="index_en.html">English</a>
+                <a class="dropdown-item" style="color:black; margin:0" href="#">Srpski</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <!-- Header section end -->
+          
+      <!-- Bread crumbs -->
+      <div class = "row-fluid">
+        <div class="offset-sm-2 col-sm-6">      
+        <nav aria-label="breadcrumb ">
+          <ol class="breadcrumb bg-white">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href ="restaurants.html">Restaurants</a></li>
+            <li class="breadcrumb-item active" aria-current="page" id = "bc_restaurant"></li>
+          </ol>
+        </nav>
+        </div>
+      </div>
+      <!-- Bread crumbs over -->
+
+	<!-- Menu section -->
+	<section class="menu-section spad set-bg" data-setbg="img/menu-bg.jpg" id = "menu">
+
+						
+	</section>
+	<!-- Menu section end -->
+
+
+    <!--====== Javascripts & Jquery ======-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/circle-progress.min.js"></script>
+    <script src="js/main.js"></script>
+
 </body>
 </html>
