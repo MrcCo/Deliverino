@@ -31,10 +31,13 @@
 	</div>
 	
 	<!-- Header section -->
-	<header class="header-section">
+	<header style="background-color: black">
 		<div class="header-warp">
 			<div class="site-logo">
-				<h2>Pulse<span>.</span></h2>
+				<!--TODO rename new index to index-->
+				<h2>
+					<a style="color : white" href="index.html">Deliverino<span>.</span></a>
+				</h2>
 			</div>
 			<!-- responsive -->
 			<div class="nav-switch">
@@ -42,15 +45,34 @@
 			</div>
 			<!-- menu -->
 			<ul class="main-menu">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">About us</a></li>
-				<li><a href="menu.html">Restaurant</a></li>
-				<li><a href="blog.html">News</a></li>
-				<li><a href="contact.html" class="active">Contact</a></li>
+				<li><a href="index.html">Pocetna</a></li>
+				<li><a href="about.html">O nama</a></li>
+				<li>
+					<a href="restaurants.html">
+						Restorani
+					</a>
+					<!-- not supposed to be like this :( 
+					<div class="dropdown-menu">
+						<a class="dropdown-item" style="color:black; margin:0" href="novi_beograd.html">Novi Beograd</a>
+						<a class="dropdown-item" style="color:black; margin:0" href="#">Zvezdara</a>
+						<a class="dropdown-item" style="color:black; margin:0" href="#">Palilula</a>
+						<a class="dropdown-item" style="color:black; margin:0" href="#">Zemun</a>
+					</div>
+					-->
+				</li>
+				<li><a href="#">Dostava</a></li>
+				<li><a href="#">Moje narudzbine</a></li>
+				<li>
+					<a class="btn dropdown-toggle" href="#" role="button" id="language_picker" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Jezik
+					</a>
+
+					<div class="dropdown-menu" >
+						<a class="dropdown-item" style="color:black; margin:0" href="about_en.html">English</a>
+						<a class="dropdown-item" style="color:black; margin:0" href="#">Srpski</a>
+					</div>
+				</li>
 			</ul>
-			<div class="header-right">
-				<p><span>Reservations</span> <i class="fa fa-phone"></i> 652-345 3222 11</p>			
-			</div>
 		</div>
 	</header>
 	<!-- Header section end -->
