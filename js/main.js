@@ -485,7 +485,9 @@ function restaurant_load(name){
     //adding menu items
     for(var i = 0; i < first_col_count; i++){
       html_to_insert = html_to_insert +  
-      "<div class=\"menu-item\"> <h5>" + restaurant.meals[i].name + "</h5> <div class=\"mi-meta\">" + 
+      "<div class=\"menu-item\">" +
+      "<h5 onclick = \"add_item('" + restaurant.meals[i].name + "'," + restaurant.meals[i].price + ",'" + restaurant.name + "')\">"+
+      restaurant.meals[i].name + "</h5> <div class=\"mi-meta\">" + 
       "<p>" + restaurant.meals[i].desc + "</p>" + 
 			"<div class=\"menu-price\">" + restaurant.meals[i].price + "</div> </div> </div>";
     }
@@ -497,8 +499,8 @@ function restaurant_load(name){
     for(var i = first_col_count; i < meal_count; i++){
       html_to_insert = html_to_insert +  
       "<div class=\"menu-item\">" +
-      "<h5 onclick = add_item(" + restaurant.meals[i].name + "," + restaurant.meals[i].price + "," + restaurant.name + ")>"+
-      + restaurant.meals[i].name + "</h5> <div class=\"mi-meta\">" + 
+      "<h5 onclick = \"add_item('" + restaurant.meals[i].name + "'," + restaurant.meals[i].price + ",'" + restaurant.name + "')\">"+
+      restaurant.meals[i].name + "</h5> <div class=\"mi-meta\">" + 
       "<p>" + restaurant.meals[i].desc + "</p>" + 
 			"<div class=\"menu-price\">" + restaurant.meals[i].price + "</div> </div> </div>";
     }
