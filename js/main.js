@@ -164,6 +164,8 @@ function init_index() {
     //flag that restaurants are already initialized
     localStorage.setItem("init_finished", true);
 
+    localStorage.setItem("current_order", 0);
+    
     //create restaurants
     //TODO add more restaurants
     var Atos = {
@@ -493,7 +495,7 @@ function restaurant_load(name){
 
   //add restaurant name to the breadcrumb
   document.getElementById("bc_restaurant").innerHTML = name;
-
+  document.getElementById("rest_name").innerHTML = name;
   //get data bout the restaurant
   for(var i = 0; i < restaurants.length; i++){
       
@@ -509,7 +511,7 @@ function restaurant_load(name){
   if(restaurant != null){
     
     var first_col_count = Math.ceil(meal_count/2);
-    var secound_col_count = meal_count - first_col_count;
+
 
     //insert container
     html_to_insert = html_to_insert + "<div class=\"container\"> <div class=\"section-title text-white\">	<i class=\"flaticon-022-tray\"></i>	<h2>Our Menu</h2> </div>";
@@ -554,6 +556,85 @@ function restaurant_load(name){
 
 //add item to local storage on index - restaurant 
 //todo finish this
-function add_item(item, cost, restaurant){
-  window.alert("Narucio " + item + " from " + restaurant + "for" + cost +"dinars");
+function add_item(item, price, restaurant){
+  window.alert("Narucio " + item + " from " + restaurant + "for" + price +" din");
+
+  var id = localStorage.getItem("current_order")
+  var orders = JSON.parse(localStorage.getItem(id));
+  
+  var order = {
+    "item" : item,
+    "price" : price,
+    "restaurant" : restaurant
+  }
+
+  if(orders == null)
+    orders = [];
+
+  orders.push(order);
+
+  localStorage.setItem(id, JSON.stringify(orders));
+
+  console.log(localStorage.getItem(id));
 } 
+
+
+function next_order(){
+  var prevous_orders = localStorage.getItem("prevous_orders");
+
+  if(prevous_orders == null){
+    prevous_orders = [];
+  }
+
+  var curr = localStorage.getItem("current_order");
+  prevous_orders.push(curr);
+  curr = curr + 1;
+  localStorage.setItem("current_order", curr);
+  
+  //TODO - redirect na sve porudzbine kad bude gotova stranica
+  window.location = "index.html";
+}
+
+function list_current_order(){
+
+  var current_order = localStorage.getItem("current_order");
+  var order = JSON.parse(localStorage.getItem(current_order));
+
+  var html_to_insert ="";
+
+  if(order != null && order.length > 0){
+    
+    //before orders
+    html_to_insert = html_to_insert + "<div class=\"container\"> " + 
+                                      "<div class=\"section-title\">" +
+                                      "<i class=\"flaticon-022-tray\"></i>" +
+                                      "<h2>Vasa narudzbina</h2>" +
+                                      "</div>" +
+                                      "<div class=\"tab-content menu-tab-content\">"+
+                                      "<div class=\"tab-pane fade show active\" id=\"tab-1\" role=\"tabpanel\" aria-labelledby=\"tab-1\">" +
+                                      "<div class=\"row menu-dark\">" +
+                                      "<div class=\"col-lg-12\">";
+
+    //order items            
+    for(var i = 0; i < order.length; i++){
+        html_to_insert = html_to_insert + 
+        "<div class=\"menu-item\">" +
+        "<h5>" + order[i].item + "</h5>" +
+        "<div class=\"mi-meta\">" +
+        "<p>" + order[i].restaurant + "</p>" +
+        "<div class=\"menu-price\">" + order[i].price + "</div>" +
+        "</div></div>";
+    }
+
+
+
+    //after orders
+    html_to_insert = html_to_insert + "</div> </div> </div> </div> </div>"
+
+    document.getElementById("delivery_body").innerHTML = html_to_insert;
+  }else{
+    window.alert("Narudzbina ne postoji");
+    window.location = "index.html";
+  }
+
+}

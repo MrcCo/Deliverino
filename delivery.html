@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Frans -Deliverino</title>
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -21,9 +16,8 @@
     <link rel="stylesheet" href="css/owl.carousel.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/animate.css" />
-
   </head>
-  <body onload="restaurant_load('Atos')">
+  <body onload="list_current_order()">
 
     <!-- Header section -->
     <header style="background-color: black">
@@ -40,14 +34,14 @@
         </div>
         <!-- menu -->
         <ul class="main-menu">
-            <li><a href="index.html">Pocetna</a></li>
+          <li><a href="index.html">Pocetna</a></li>
           <li><a href="about.html">O nama</a></li>
           <li>
-            <a href="restaurants.html" class = "active">
+            <a href="restaurants.html">
               Restorani
             </a>
           </li>
-          <li><a href="delivery.html">Dostava</a></li>
+          <li><a href="delivery.html" class="active">Dostava</a></li>
           <li><a href="my_orders.html">Moje narudzbine</a></li>
           <li>
             <a class="btn dropdown-toggle" href="#" role="button"
@@ -58,7 +52,7 @@
 
             <div class="dropdown-menu">
               <a class="dropdown-item" style="color:black; margin:0"
-                href="atos_en.html">English</a>
+                href="delivery_en.html">English</a>
               <a class="dropdown-item" style="color:black; margin:0" href="#">Srpski</a>
             </div>
           </li>
@@ -67,38 +61,20 @@
     </header>
     <!-- Header section end -->
 
-    <!-- Bread crumbs -->
-    <div class="row-fluid">
-      <div class="offset-sm-2 col-sm-6">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb bg-white">
-            <li class="breadcrumb-item"><a href="index.html">Pocetna</a></li>
-            <li class="breadcrumb-item"><a href="restaurants.html">Restorani</a></li>
-            <li class="breadcrumb-item active" aria-current="page"
-              id="bc_restaurant"></li>
-          </ol>
-        </nav>
-      </div>
-    </div>
-    <!-- Bread crumbs over -->
+    <div class="container">
+      <div class="row">
+        <div id="delivery_body" class="offset-sm-3 col-sm-6">
 
 
-    <!-- Page info section -->
-    <section class="page-top-info set-bg" data-setbg="img/page-top-bg/2.jpg">
-      <div class="ptf-center">
-        <div class="container">
-          <h2 id="rest_name"><span>.</span></h2>
+
         </div>
       </div>
-    </section>
-    <!-- Page info section end -->
-
-    <!-- Menu section -->
-    <section class="menu-section spad set-bg" data-setbg="img/menu-bg.jpg"
-      id="menu">
-    </section>
-    <!-- Menu section end -->
-
+      <div class= row>
+        <div class="offset-sm-5 col-sm-6">
+          <button type="button" class="btn btn-warning" onclick="next_order()">Potvrdi narudzbinu</button>
+        </div>
+      </div>
+    </div>
 
     <!--====== Javascripts & Jquery ======-->
     <script src="js/jquery-3.2.1.min.js"></script>
@@ -110,6 +86,5 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/circle-progress.min.js"></script>
     <script src="js/main.js"></script>
-
   </body>
 </html>
