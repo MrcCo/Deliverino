@@ -7,7 +7,7 @@
 
 "use strict";
 
-$(window).on("load", function() {
+$(window).on("load", function () {
   /*------------------
 		Preloder
 	--------------------*/
@@ -17,11 +17,11 @@ $(window).on("load", function() {
     .fadeOut("slow");
 });
 
-(function($) {
+(function ($) {
   /*------------------
 		Navigation
 	--------------------*/
-  $(".nav-switch").on("click", function(event) {
+  $(".nav-switch").on("click", function (event) {
     $(".main-menu").slideToggle(400);
     event.preventDefault();
   });
@@ -29,7 +29,7 @@ $(window).on("load", function() {
   /*------------------
 		Background Set
 	--------------------*/
-  $(".set-bg").each(function() {
+  $(".set-bg").each(function () {
     var bg = $(this).data("setbg");
     $(this).css("background-image", "url(" + bg + ")");
   });
@@ -48,12 +48,12 @@ $(window).on("load", function() {
       items: 1,
       autoplay: true
     })
-    .on("changed.owl.carousel", function(event) {
+    .on("changed.owl.carousel", function (event) {
       $(".hero-slider .owl-dots:last-child").remove();
       currentHSnumber();
     });
   var dot = $(".hero-slider .owl-dot");
-  dot.each(function() {
+  dot.each(function () {
     var index = $(this).index() + 1;
     if (index < 10) {
       $(this)
@@ -111,7 +111,7 @@ $(window).on("load", function() {
   /*------------------
 		Accordions
 	--------------------*/
-  $(".panel-link").on("click", function(e) {
+  $(".panel-link").on("click", function (e) {
     $(".panel-link").removeClass("active");
     var $this = $(this);
     if (!$this.hasClass("active")) {
@@ -123,17 +123,17 @@ $(window).on("load", function() {
   /*------------------
 		Circle progress
 	--------------------*/
-  $(".circle-progress").each(function() {
+  $(".circle-progress").each(function () {
     var cpvalue = $(this).data("cpvalue");
     var cpcolor = $(this).data("cpcolor");
     var cpid = $(this).data("cpid");
 
     $(this).append(
       '<div class="' +
-        cpid +
-        '"></div><div class="progress-value"><h3>' +
-        cpvalue +
-        "%</h3></div>"
+      cpid +
+      '"></div><div class="progress-value"><h3>' +
+      cpvalue +
+      "%</h3></div>"
     );
 
     if (cpvalue < 100) {
@@ -165,7 +165,7 @@ function init_index() {
     localStorage.setItem("init_finished", true);
 
     localStorage.setItem("current_order", 0);
-    
+
     //create restaurants
     //TODO add more restaurants
     var Atos = {
@@ -176,36 +176,50 @@ function init_index() {
       adr: "Adresa",
       img: "img/logo/atos.jpeg", //lokacija slike
       desc: "Lep restoran", //opis restorana
-      page: "atos.html",
-      page_en: "atos.html",
-      meals : [
+      page: " atos.html",
+      page_en: " atos.html",
+      meals: [
         {
-          "name" : "Teleca corba",
-          "price" : 350  
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
         },
         {
-          "name" : "Teleca corba",
-          "price" : 350  
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
         },
         {
-          "name" : "Teleca corba",
-          "price" : 350  
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
         },
         {
-          "name" : "Teleca corba",
-          "price" : 350  
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
         },
         {
-          "name" : "Teleca corba",
-          "price" : 350  
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
         },
         {
-          "name" : "Teleca corba",
-          "price" : 350  
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
         },
         {
-          "name" : "Teleca corba",
-          "price" : 350  
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
         }
       ]
     };
@@ -219,43 +233,50 @@ function init_index() {
       adr: "Adresa",
       img: "img/logo/cheznik.jpg", //lokacija slike
       desc: "Lep restoran", //opis restorana
-      page: "nik.html",
-      page_en: "nik.html",
-      meals : [
+      page: " nik.html",
+      page_en: " nik.html",
+      meals: [
         {
-          "name" : "Teleca corba",
-          "price" : 350,
-          "desc" : "Tasty"  
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
         },
         {
-          "name" : "Teleca corba",
-          "price" : 350,
-          "desc" : "Tasty"  
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
         },
         {
-          "name" : "Teleca corba",
-          "price" : 350,
-          "desc" : "Tasty"  
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
         },
         {
-          "name" : "Teleca corba",
-          "price" : 350,
-          "desc" : "Tasty"  
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
         },
         {
-          "name" : "Teleca corba",
-          "price" : 350,  
-          "desc" : "Tasty"
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
         },
         {
-          "name" : "Teleca corba",
-          "price" : 350,  
-          "desc" : "Tasty"
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
         },
         {
-          "name" : "Teleca corba",
-          "price" : 350,
-          "desc" : "Tasty" 
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
         }
       ]
     };
@@ -269,43 +290,50 @@ function init_index() {
       adr: "Adresa",
       img: "img/logo/frans.jpg", //lokacija slike
       desc: "Lep restoran", //opis restorana
-      page: "frans.html",
-      page_en: "frans.html",
-      meals : [
+      page: " frans.html",
+      page_en: " frans.html",
+      meals: [
         {
-          "name" : "Teleca corba",
-          "price" : 350,
-          "desc" : "Tasty"  
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
         },
         {
-          "name" : "Teleca corba",
-          "price" : 350,
-          "desc" : "Tasty"  
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
         },
         {
-          "name" : "Teleca corba",
-          "price" : 350,
-          "desc" : "Tasty"  
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
         },
         {
-          "name" : "Teleca corba",
-          "price" : 350,
-          "desc" : "Tasty"  
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
         },
         {
-          "name" : "Teleca corba",
-          "price" : 350,  
-          "desc" : "Tasty"
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
         },
         {
-          "name" : "Teleca corba",
-          "price" : 350,  
-          "desc" : "Tasty"
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
         },
         {
-          "name" : "Teleca corba",
-          "price" : 350,
-          "desc" : "Tasty" 
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
         }
       ]
     };
@@ -319,43 +347,50 @@ function init_index() {
       adr: "Adresa",
       img: "img/logo/soibiber.jpg", //lokacija slike
       desc: "Lep restoran", //opis restorana
-      page: "biber.html",
-      page_en: "biber.html",
-      meals : [
+      page: " biber.html",
+      page_en: " biber.html",
+      meals: [
         {
-          "name" : "Teleca corba",
-          "price" : 350,
-          "desc" : "Tasty"  
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
         },
         {
-          "name" : "Teleca corba",
-          "price" : 350,
-          "desc" : "Tasty"  
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
         },
         {
-          "name" : "Teleca corba",
-          "price" : 350,
-          "desc" : "Tasty"  
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
         },
         {
-          "name" : "Teleca corba",
-          "price" : 350,
-          "desc" : "Tasty"  
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
         },
         {
-          "name" : "Teleca corba",
-          "price" : 350,  
-          "desc" : "Tasty"
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
         },
         {
-          "name" : "Teleca corba",
-          "price" : 350,  
-          "desc" : "Tasty"
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
         },
         {
-          "name" : "Teleca corba",
-          "price" : 350,
-          "desc" : "Tasty" 
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
         }
       ]
     };
@@ -368,7 +403,7 @@ function init_index() {
     console.log(restaurants);
   }
 
-  
+
   load_top_restaurants();
 }
 
@@ -376,12 +411,12 @@ function init_index() {
 function sort_by_avg(restaurants) {
   for (var i = 0; i < restaurants.length; i++) {
     for (var j = i + 1; j < restaurants.length; j++) {
-    var avg_i = 0;
-    if (restaurants[i].count > 0)
-      avg_i = restaurants[i].sum / restaurants[i].count;
-    var avg_j = 0;
-    if (restaurants[j].count > 0)
-      avg_j = restaurants[j].sum / restaurants[j].count;
+      var avg_i = 0;
+      if (restaurants[i].count > 0)
+        avg_i = restaurants[i].sum / restaurants[i].count;
+      var avg_j = 0;
+      if (restaurants[j].count > 0)
+        avg_j = restaurants[j].sum / restaurants[j].count;
 
       // console.log(restaurants[i].name, restaurants[j].name, avg_i, avg_j);
       if (avg_i < avg_j) {
@@ -416,6 +451,7 @@ function load_top_restaurants() {
   var top3_desc = restaurants[2].desc;
   var top3_page = restaurants[2].page;
 
+
   document.getElementById("top1_image").src = top1_img;
   document.getElementById("top1_link").innerHTML = top1_name;
   document.getElementById("top1_link").href = top1_page;
@@ -432,8 +468,7 @@ function load_top_restaurants() {
   document.getElementById("top3_desc").innerHTML = top3_desc;
 }
 
-function addRating(id, rating)
-{
+function addRating(id, rating) {
   var restaurants = JSON.parse(localStorage.getItem("restaurants"));
 
   restaurants[id]['sum'] += rating;
@@ -453,40 +488,85 @@ function getStarRating(id) {
 }
 
 
-function restaurants_create_body(){
+function load_all_restaurants() {
   var restaurants = JSON.parse(localStorage.getItem("restaurants"));
   var html_to_insert = "";
 
-  html_to_insert =  html_to_insert + 
-                      "<div class = \"offset-sm-2 col-sm-8\" >";
-  for(var i = 0; i < restaurants.length; i++){
-    if(i % 2 == 0){                  
-     html_to_insert +="<div class = \"row\">"
+  html_to_insert = html_to_insert +
+    "<div class = \"offset-sm-2 col-sm-8\" >";
+  for (var i = 0; i < restaurants.length; i++) {
+
+    if (i % 2 == 0) {
+      html_to_insert += "<div class = \"row\">"
     }
-     html_to_insert +="<div class = \"col-sm-2\">"+
-                      "<img src = \"" + restaurants[i].img + "\" style=\"height: 100px\">"+
-                      "</div>"+
-                      "<div class = \"col-sm-4\" style =\"padding : 10px\">" +
-                      "<h3 class = \"text-left\"><a href=\"" + restaurants[i].page + "\">" +restaurants[i].name + "</a></h3><br/>" +
-                      "<p class = \"text-left\">" + restaurants[i].desc + "</p><br>" + getStarRating(i) +
-                      "</div>";
-    if(i % 2 == 1){
-     html_to_insert +="</div>";
-    }                
+    html_to_insert += "<div class = \"col-sm-2\">" +
+      "<img src = \"" + restaurants[i].img + "\" style=\"height: 100px\">" +
+      "</div>" +
+      "<div class = \"col-sm-4\" style =\"padding : 10px\">" +
+      "<h3 class = \"text-left\"><a href=\"" + restaurants[i].page + "\">" + restaurants[i].name + "</a></h3><br/>" +
+      "<p class = \"text-left\">" + restaurants[i].desc + "</p><br>" + getStarRating(i) +
+      "</div>";
+    if (i % 2 == 1) {
+      html_to_insert += "</div>";
+    }
   }
 
-  if(restaurants.length % 2 == 1){
-    html_to_insert +="</div>";
+  if (restaurants.length % 2 == 1) {
+    html_to_insert += "</div>";
   }
 
-  
-  html_to_insert +="</div>";
+
+  html_to_insert += "</div>";
   document.getElementById("main_tag").innerHTML = html_to_insert;
 
 }
 
+function load_restaurants_from(mun) {
+  var restaurants = JSON.parse(localStorage.getItem("restaurants"));
+  var html_to_insert = "";
+  var restaurants_from = [];
 
-function restaurant_load(name){
+  for (var i = 0; i < restaurants.length; i++) {
+    if (restaurants[i].mun === mun) {
+      restaurants_from.push(restaurants[i]);
+    }
+  }
+
+  if (restaurants_from.length === 0) {
+    window.alert("Nema restorana iz ove opstine");
+    window.location = "index.html"                //note obrati paznju na jezik ovde !!s
+  } else {
+
+    html_to_insert = html_to_insert +
+      "<div class = \"offset-sm-2 col-sm-8\" >";
+    for (var i = 0; i < restaurants_from.length; i++) {
+
+      if (i % 2 == 0) {
+        html_to_insert += "<div class = \"row\">"
+      }
+      html_to_insert += "<div class = \"col-sm-2\">" +
+        "<img src = \"" + restaurants_from[i].img + "\" style=\"height: 100px\">" +
+        "</div>" +
+        "<div class = \"col-sm-4\" style =\"padding : 10px\">" +
+        "<h3 class = \"text-left\"><a href=\"" + restaurants_from[i].page + "\">" + restaurants_from[i].name + "</a></h3><br/>" +
+        "<p class = \"text-left\">" + restaurants_from[i].desc + "</p><br>" + getStarRating(i) +
+        "</div>";
+      if (i % 2 == 1) {
+        html_to_insert += "</div>";
+      }
+    }
+
+    if (restaurants_from.length % 2 == 1) {
+      html_to_insert += "</div>";
+    }
+
+
+    html_to_insert += "</div>";
+    document.getElementById("main_tag").innerHTML = html_to_insert;
+  }
+}
+
+function load_single_restaurant(name) {
 
   var html_to_insert = "";
   var restaurants = JSON.parse(localStorage.getItem("restaurants"));
@@ -495,80 +575,82 @@ function restaurant_load(name){
 
   //add restaurant name to the breadcrumb
   document.getElementById("bc_restaurant").innerHTML = name;
-  document.getElementById("rest_name").innerHTML = name;
+  document.getElementById("rest_name").innerHTML = name + "<span>.</span>";
   //get data bout the restaurant
-  for(var i = 0; i < restaurants.length; i++){
-      
-      if(restaurants[i].name == name){
-          restaurant = restaurants[i];
-          meal_count = restaurant.meals.length;
-          break;
-      }
+  for (var i = 0; i < restaurants.length; i++) {
+
+    if (restaurants[i].name == name) {
+      restaurant = restaurants[i];
+      meal_count = restaurant.meals.length;
+      break;
+    }
 
   }
 
   //just in case 
-  if(restaurant != null){
-    
-    var first_col_count = Math.ceil(meal_count/2);
+  if (restaurant != null) {
+
+    var first_col_count = Math.ceil(meal_count / 2);
 
 
     //insert container
-    html_to_insert = html_to_insert + "<div class=\"container\"> <div class=\"section-title text-white\">	<i class=\"flaticon-022-tray\"></i>	<h2>Our Menu</h2> </div>";
+    html_to_insert = html_to_insert + "<div class=\"container\"> <div class=\"section-title text-white\">	<i class=\"flaticon-003-chicken-2\"></i>	<h2>Our Menu</h2> </div>";
 
     //menu tab nav
-    html_to_insert = html_to_insert + 
-    "<div class=\"tab-content menu-tab-content\"> <div class=\"tab-pane fade show active\" id=\"tab-1\" role=\"tabpanel\" aria-labelledby=\"tab-1\"> <div class=\"row\"> <div class=\"col-lg-6\">";
-    
+    html_to_insert = html_to_insert +
+      "<div class=\"tab-content menu-tab-content\"> <div class=\"tab-pane fade show active\" id=\"tab-1\" role=\"tabpanel\" aria-labelledby=\"tab-1\"> <div class=\"row\"> <div class=\"col-lg-6\">";
+
     //adding menu items
-    for(var i = 0; i < first_col_count; i++){
-      html_to_insert = html_to_insert +  
-      "<div class=\"menu-item\">" +
-      "<h5 onclick = \"add_item('" + restaurant.meals[i].name + "'," + restaurant.meals[i].price + ",'" + restaurant.name + "')\">"+
-      restaurant.meals[i].name + "</h5> <div class=\"mi-meta\">" + 
-      "<p>" + restaurant.meals[i].desc + "</p>" + 
-			"<div class=\"menu-price\">" + restaurant.meals[i].price + "</div> </div> </div>";
+    for (var i = 0; i < first_col_count; i++) {
+      html_to_insert = html_to_insert +
+        "<div class=\"menu-item\">" +
+        "<img src = \"" + restaurant.meals[i].img + "\" onclick = \"add_item('" + restaurant.meals[i].name + "'," + restaurant.meals[i].price + ",'" + restaurant.name + "')\">" +
+        "<h5 style = \"padding-top : 20px\"onclick = \"add_item('" + restaurant.meals[i].name + "'," + restaurant.meals[i].price + ",'" + restaurant.name + "')\">" +
+        restaurant.meals[i].name + "</h5> <div class=\"mi-meta\">" +
+        "<p>" + restaurant.meals[i].desc + "</p>" +
+        "<div class=\"menu-price\">" + restaurant.meals[i].price + "</div> </div> </div>";
     }
 
     //add row break
     html_to_insert = html_to_insert + "</div> <div class=\"col-lg-6\">";
 
     //adding more menu items
-    for(var i = first_col_count; i < meal_count; i++){
-      html_to_insert = html_to_insert +  
-      "<div class=\"menu-item\">" +
-      "<h5 onclick = \"add_item('" + restaurant.meals[i].name + "'," + restaurant.meals[i].price + ",'" + restaurant.name + "')\">"+
-      restaurant.meals[i].name + "</h5> <div class=\"mi-meta\">" + 
-      "<p>" + restaurant.meals[i].desc + "</p>" + 
-			"<div class=\"menu-price\">" + restaurant.meals[i].price + "</div> </div> </div>";
+    for (var i = first_col_count; i < meal_count; i++) {
+      html_to_insert = html_to_insert +
+        "<div class=\"menu-item\">" +
+        "<img src = \"" + restaurant.meals[i].img + "\" onclick = \"add_item('" + restaurant.meals[i].name + "'," + restaurant.meals[i].price + ",'" + restaurant.name + "')\">" +
+        "<h5 style = \"padding-top : 20px\"onclick = \"add_item('" + restaurant.meals[i].name + "'," + restaurant.meals[i].price + ",'" + restaurant.name + "')\">" +
+        restaurant.meals[i].name + "</h5> <div class=\"mi-meta\">" +
+        "<p>" + restaurant.meals[i].desc + "</p>" +
+        "<div class=\"menu-price\">" + restaurant.meals[i].price + "</div> </div> </div>";
     }
 
     //closing tags
-    html_to_insert = html_to_insert + 
-    "</div> </div> </div> </div> ";
+    html_to_insert = html_to_insert +
+      "</div> </div> </div> </div> ";
 
 
     document.getElementById("menu").innerHTML = html_to_insert;
-  }else{
-      window.alert("Ne postoji restoran!!!");
+  } else {
+    window.alert("Ne postoji restoran!!!");
   }
 }
 
 //add item to local storage on index - restaurant 
 //todo finish this
-function add_item(item, price, restaurant){
-  window.alert("Narucio " + item + " from " + restaurant + "for" + price +" din");
+function add_item(item, price, restaurant) {
+  window.alert("Narucio " + item + " iz " + restaurant + " za " + price + " dinara");
 
   var id = localStorage.getItem("current_order")
   var orders = JSON.parse(localStorage.getItem(id));
-  
+
   var order = {
-    "item" : item,
-    "price" : price,
-    "restaurant" : restaurant
+    "item": item,
+    "price": price,
+    "restaurant": restaurant
   }
 
-  if(orders == null)
+  if (orders == null)
     orders = [];
 
   orders.push(order);
@@ -576,48 +658,81 @@ function add_item(item, price, restaurant){
   localStorage.setItem(id, JSON.stringify(orders));
 
   console.log(localStorage.getItem(id));
-} 
-
-
-function next_order(){
-  var prevous_orders = localStorage.getItem("prevous_orders");
-
-  if(prevous_orders == null){
-    prevous_orders = [];
-  }
-
-  var curr = localStorage.getItem("current_order");
-  prevous_orders.push(curr);
-  curr = curr + 1;
-  localStorage.setItem("current_order", curr);
-  
-  //TODO - redirect na sve porudzbine kad bude gotova stranica
-  window.location = "index.html";
 }
 
-function list_current_order(){
+function finalize_order() {
+  window.location = "finalize_order.html";
+}
+
+function next_order() {
+
+  var name = document.form.name.value;
+  var surname = document.form.surname.value;
+  var addr = document.form.addr.value;
+  var email = document.form.email.value;
+  var phone = document.form.phone.value;
+
+  var email_regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+
+  //TODO add phone regex
+  var phone_regex = /a/;
+
+  if (email_regex.test(email)) {
+
+    var prevous_orders = JSON.parse(localStorage.getItem("prevous_orders"));
+
+    if (prevous_orders == null) {
+      prevous_orders = [];
+    }
+
+    var curr = localStorage.getItem("current_order");
+
+    var item = {
+      "name": name,
+      "surname": surname,
+      "addr": addr,
+      "email": email,
+      "phone": phone,
+      "meals": localStorage.getItem(curr)
+    }
+
+    prevous_orders.push(item);
+    curr = +curr + 1;
+    localStorage.setItem("current_order", curr);
+    localStorage.setItem("prevous_orders", JSON.stringify(prevous_orders));
+
+
+    //TODO - redirect na sve porudzbine kad bude gotova stranica  
+    window.location = "my_orders.html";
+  } else {
+    window.alert("Uneli ste nevalidne podatke");
+  }
+}
+
+function list_current_order() {
 
   var current_order = localStorage.getItem("current_order");
   var order = JSON.parse(localStorage.getItem(current_order));
 
-  var html_to_insert ="";
+  var html_to_insert = "";
 
-  if(order != null && order.length > 0){
-    
+  if (order != null && order.length > 0) {
+
     //before orders
-    html_to_insert = html_to_insert + "<div class=\"container\"> " + 
-                                      "<div class=\"section-title\">" +
-                                      "<i class=\"flaticon-022-tray\"></i>" +
-                                      "<h2>Vasa narudzbina</h2>" +
-                                      "</div>" +
-                                      "<div class=\"tab-content menu-tab-content\">"+
-                                      "<div class=\"tab-pane fade show active\" id=\"tab-1\" role=\"tabpanel\" aria-labelledby=\"tab-1\">" +
-                                      "<div class=\"row menu-dark\">" +
-                                      "<div class=\"col-lg-12\">";
+    html_to_insert = html_to_insert + "<div class=\"container\"> " +
+      "<div class=\"section-title\">" +
+      "<i class=\"flaticon-007-spaguetti\"></i>" +
+      "<h2>Vasa narudzbina</h2>" +
+      "</div>" +
+      "<div class=\"tab-content menu-tab-content\">" +
+      "<div class=\"tab-pane fade show active\" id=\"tab-1\" role=\"tabpanel\" aria-labelledby=\"tab-1\">" +
+      "<div class=\"row menu-dark\">" +
+      "<div class=\"col-lg-12\">";
 
     //order items            
-    for(var i = 0; i < order.length; i++){
-        html_to_insert = html_to_insert + 
+    for (var i = 0; i < order.length; i++) {
+      html_to_insert = html_to_insert +
         "<div class=\"menu-item\">" +
         "<h5>" + order[i].item + "</h5>" +
         "<div class=\"mi-meta\">" +
@@ -632,9 +747,66 @@ function list_current_order(){
     html_to_insert = html_to_insert + "</div> </div> </div> </div> </div>"
 
     document.getElementById("delivery_body").innerHTML = html_to_insert;
-  }else{
+  } else {
     window.alert("Narudzbina ne postoji");
     window.location = "index.html";
   }
+
+}
+
+function list_my_orders() {
+
+  var my_orders = JSON.parse(localStorage.getItem("prevous_orders"));
+
+  if (my_orders.length == 0) {
+    //NOTE obrati paznju na jezik
+    window.alert("Nema narudzbina");
+    window.location = "index.html";
+  }
+
+  var html_to_insert = "";
+
+  for (var i = 0; i < my_orders.length; i++) {
+
+    html_to_insert = html_to_insert + " <table class=\"table table-striped\">" +
+      "<tbody>" +
+      "<tr>" +
+      "<td align=\"center\">Ime :</td>" + 
+    "<td align=\"center\">" + my_orders[i].name + "</td>" +
+      "</tr>" +
+      "<tr>" +
+      "<td align=\"center\">Preizme :</td>" +
+    "<td align=\"center\">" + my_orders[i].surname + "</td>" +
+      "</tr>" +
+      "<tr>" +
+      "<td align=\"center\">Adresa :</td>" +
+    "<td align=\"center\">" + my_orders[i].addr + "</td>" +
+      "</tr>" +
+      "<tr>" +
+      "<td align=\"center\">Email :</td>" +
+    "<td align=\"center\">" + my_orders[i].email + "</td>" +
+      "</tr>" +
+      "<tr>" +
+      "<td align=\"center\">Telefon :</td>" +
+    "<td align=\"center\">" + my_orders[i].phone + "</td>"+
+    "</tr>";
+
+    //TODO meals
+    var meals = JSON.parse(my_orders[i].meals);
+    for(var j = 0; j < meals.length; j++){
+      html_to_insert = html_to_insert + 
+      "<tr>" +
+      "<td align=\"center\">Jelo :</td>" +
+    "<td align=\"center\">" + meals[j].item + " iz " + meals[j].restaurant + "</td>"+
+    "</tr>";
+    }
+
+    //close table
+    html_to_insert = html_to_insert +
+      "</tbody> </table>";
+
+  }
+
+  document.getElementById("orders").innerHTML = html_to_insert;
 
 }

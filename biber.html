@@ -1,115 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Frans -Deliverino</title>
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Deliverino</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Frans -Deliverino</title>
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="shortcut icon" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Deliverino</title>
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/font-awesome.min.css" />
-    <link rel="stylesheet" href="css/flaticon.css" />
-    <link rel="stylesheet" href="css/owl.carousel.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/animate.css" />
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="shortcut icon" />
 
-  </head>
-  <body onload="restaurant_load('So i Biber')">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/flaticon.css" />
+  <link rel="stylesheet" href="css/owl.carousel.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animate.css" />
 
-    <!-- Header section -->
-    <header style="background-color: black">
-      <div class="header-warp">
-        <div class="site-logo">
-          <!--TODO rename new index to index-->
-          <h2>
-            <a style="color : white" href="index.html">Deliverino<span>.</span></a>
-          </h2>
-        </div>
-        <!-- responsive -->
-        <div class="nav-switch">
-          <i class="fa fa-bars"></i>
-        </div>
-        <!-- menu -->
-        <ul class="main-menu">
-          <li><a href="index.html">Pocetna</a></li>
-          <li><a href="about.html">O nama</a></li>
-          <li>
-            <a href="restaurants.html" class="active">
-              Restorani
-            </a>
-          </li>
-          <li><a href="delivery.html">Dostava</a></li>
-          <li><a href="my_orders.html">Moje narudzbine</a></li>
-          <li>
-            <a class="btn dropdown-toggle" href="#" role="button"
-              id="language_picker" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">
-              Jezik
-            </a>
+</head>
 
-            <div class="dropdown-menu">
-              <a class="dropdown-item" style="color:black; margin:0"
-                href="biber_en.html">English</a>
-              <a class="dropdown-item" style="color:black; margin:0" href="#">Srpski</a>
-            </div>
-          </li>
-        </ul>
+<body onload="load_single_restaurant('So i Biber')">
+  <!-- Header section -->
+  <header style="background-color: black">
+    <div class="header-warp">
+      <div class="site-logo">
+        <!--TODO rename new index to index-->
+        <h2>
+          <a style="color : white" href="index.html">Deliverino<span>.</span></a>
+        </h2>
       </div>
-    </header>
-    <!-- Header section end -->
+      <!-- responsive -->
+      <div class="nav-switch">
+        <i class="fa fa-bars"></i>
+      </div>
+      <!-- menu -->
+      <ul class="main-menu">
+        <li><a href="index.html">Pocetna</a></li>
+        <li><a href="about.html">O nama</a></li>
+        <li>
+          <a class="btn dropdown-toggle active" href="#" role="button" id="language_picker" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Restorani
+          </a>
 
-    <!-- Bread crumbs -->
-    <div class="row-fluid">
-      <div class="offset-sm-2 col-sm-6">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb bg-white">
-            <li class="breadcrumb-item"><a href="index.html">Pocetna</a></li>
-            <li class="breadcrumb-item"><a href="restaurants.html">Restorani</a></li>
-            <li class="breadcrumb-item active" aria-current="page"
-              id="bc_restaurant"></li>
-          </ol>
-        </nav>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" style="color:black; margin:0" href="restaurants.html">Svi restorani</a>
+            <a class="dropdown-item" style="color:black; margin:0" href="restaurants_nbg.html">Novi Beograd</a>
+            <a class="dropdown-item" style="color:black; margin:0" href="restaurants_zmn.html">Zemun</a>
+            <a class="dropdown-item" style="color:black; margin:0" href="restaurants_zve.html">Zvezdara</a>
+            <a class="dropdown-item" style="color:black; margin:0" href="restaurants_stg.html">Stari Grad</a>
+            <a class="dropdown-item" style="color:black; margin:0" href="restaurants_vrc.html">Vracar</a>
+          </div>
+        </li>
+        <li><a href="delivery.html">Dostava</a></li>
+        <li><a href="my_orders.html">Moje narudzbine</a></li>
+        <li>
+          <a class="btn dropdown-toggle" href="#" role="button" id="language_picker" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Jezik
+          </a>
+
+          <div class="dropdown-menu">
+            <a class="dropdown-item" style="color:black; margin:0" href="index_en.html">English</a>
+            <a class="dropdown-item" style="color:black; margin:0" href="#">Srpski</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <!-- Header section end -->
+
+  <!-- Bread crumbs -->
+  <div class="row-fluid">
+    <div class="offset-sm-2 col-sm-6" style="padding-top: 20px">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-white">
+          <li class="breadcrumb-item"><a style="color:black" href="index.html">Pocetna</a></li>
+          <li class="breadcrumb-item"><a style="color:black" href="restaurants.html">Restorani</a></li>
+          <li class="breadcrumb-item" style="color:#ffc515" aria-current="page" id="bc_restaurant"></li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <!-- Bread crumbs over -->
+
+
+  <!-- Page info section -->
+  <section class="page-top-info set-bg" data-setbg="img/page-top-bg/2.jpg">
+    <div class="ptf-center">
+      <div class="container">
+        <h2 id="rest_name"><span>.</span></h2>
       </div>
     </div>
-    <!-- Bread crumbs over -->
+  </section>
+  <!-- Page info section end -->
+
+  <!-- Menu section -->
+  <section class="menu-section spad set-bg" data-setbg="img/menu-bg.jpg" id="menu">
+  </section>
+  <!-- Menu section end -->
 
 
-    <!-- Page info section -->
-    <section class="page-top-info set-bg" data-setbg="img/page-top-bg/2.jpg">
-      <div class="ptf-center">
-        <div class="container">
-          <h2 id="rest_name"><span>.</span></h2>
-        </div>
+
+
+  <!--Google map-->
+  <div class="row">
+    <div id="map-container-google-2" class="z-depth-1-half map-container" style="height: 450PX; width : 100%;">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.384114583534!2d20.44051195134506!3d44.81373878452659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a6550deaefcad%3A0x7cea5d6016e3afff!2z0KHQviDQuCDQsdC40LHQtdGA!5e0!3m2!1ssr!2srs!4v1558349570644!5m2!1ssr!2srs"
+        width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+  </div>
+  <!--Google Maps-->
+
+  <!-- Footer section -->
+  <footer class="footer-section">
+    <div class="footer-bg-area set-bg" data-setbg="img/footer-bg.jpg">
+      <div class="copyright">
+        <p>
+          Copyright
+          <br />
+          2019
+          <br />
+          Nenad Bauk and Marko Stefanovic
+          <br />
+          Odsek za softversko inzenjerstvo Elektrotehnickog fakulteta
+          <br />
+          Univerziteta u Beogradu
+        </p>
       </div>
-    </section>
-    <!-- Page info section end -->
-
-    <!-- Menu section -->
-    <section class="menu-section spad set-bg" data-setbg="img/menu-bg.jpg"
-      id="menu">
-    </section>
-    <!-- Menu section end -->
+    </div>
+  </footer>
+  <!-- Footer section end -->
 
 
-    <!--====== Javascripts & Jquery ======-->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/circle-progress.min.js"></script>
-    <script src="js/main.js"></script>
 
-  </body>
+
+  <!--====== Javascripts & Jquery ======-->
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/circle-progress.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
 </html>

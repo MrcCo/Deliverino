@@ -2,11 +2,6 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Frans -Deliverino</title>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -22,10 +17,9 @@
   <link rel="stylesheet" href="css/owl.carousel.css" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/animate.css" />
-
 </head>
 
-<body onload="load_single_restaurant('Chez Nik')">
+<body onload="load_restaurants_from('Stari Grad')">
   <!-- Header section -->
   <header style="background-color: black">
     <div class="header-warp">
@@ -76,48 +70,22 @@
   </header>
   <!-- Header section end -->
 
-
   <!-- Bread crumbs -->
   <div class="row-fluid">
     <div class="offset-sm-2 col-sm-6" style="padding-top: 20px">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb bg-white">
-          <li class="breadcrumb-item"><a style = "color:black" href="index.html">Pocetna</a></li>
-          <li class="breadcrumb-item"><a style = "color:black" href="restaurants.html">Restorani</a></li>
-          <li class="breadcrumb-item" style = "color:#ffc515" aria-current="page" id="bc_restaurant"></li>
+          <li class="breadcrumb-item"><a style="color:black" href="index.html">Pocetna</a></li>
+          <li class="breadcrumb-item"><a style="color:black" href="restaurants.html">Restorani</a></li>
+          <li class="breadcrumb-item" style="color:#ffc515" aria-current="page">Stari Grad</li>
         </ol>
       </nav>
     </div>
   </div>
   <!-- Bread crumbs over -->
-
-
-  <!-- Page info section -->
-  <section class="page-top-info set-bg" data-setbg="img/page-top-bg/2.jpg">
-    <div class="ptf-center">
-      <div class="container">
-        <h2 id="rest_name"><span>.</span></h2>
-      </div>
-    </div>
-  </section>
-  <!-- Page info section end -->
-
-  <!-- Menu section -->
-  <section class="menu-section spad set-bg" data-setbg="img/menu-bg.jpg" id="menu">
-  </section>
-  <!-- Menu section end -->
-
-
-
-  <!--Google map-->
-  <div class="row">
-    <div id="map-container-google-2" class="z-depth-1-half map-container" style="height: 450PX; width : 100%;">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.367034908731!2d20.424434951345056!3d44.814086784503594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a655e3ac1af61%3A0x69a7e1e805f2d9bf!2sChez+Nik!5e0!3m2!1ssr!2srs!4v1558349502845!5m2!1ssr!2srs"
-        width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+  <div class="row" id="main_tag">
   </div>
 
-  <!--Google Maps-->
 
   <!-- Footer section -->
   <footer class="footer-section">
@@ -148,7 +116,6 @@
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/circle-progress.min.js"></script>
   <script src="js/main.js"></script>
-
 </body>
 
 </html>
