@@ -503,7 +503,7 @@ function load_all_restaurants() {
       "<img src = \"" + restaurants[i].img + "\" style=\"height: 100px\">" +
       "</div>" +
       "<div class = \"col-sm-4\" style =\"padding : 10px\">" +
-      "<h3 class = \"text-left\"><a href=\"" + restaurants[i].page + "\">" + restaurants[i].name + "</a></h3><br/>" +
+      "<h3 class = \"text-left\"><a style = \"color:black\"  href=\"" + restaurants[i].page + "\">" + restaurants[i].name + "</a></h3><br/>" +
       "<p class = \"text-left\">" + restaurants[i].desc + "</p><br>" + getStarRating(i) +
       "</div>";
     if (i % 2 == 1) {
@@ -548,7 +548,7 @@ function load_restaurants_from(mun) {
         "<img src = \"" + restaurants_from[i].img + "\" style=\"height: 100px\">" +
         "</div>" +
         "<div class = \"col-sm-4\" style =\"padding : 10px\">" +
-        "<h3 class = \"text-left\"><a href=\"" + restaurants_from[i].page + "\">" + restaurants_from[i].name + "</a></h3><br/>" +
+        "<h3 class = \"text-left\"><a style = \"color:black\" href=\"" + restaurants_from[i].page + "\">" + restaurants_from[i].name + "</a></h3><br/>" +
         "<p class = \"text-left\">" + restaurants_from[i].desc + "</p><br>" + getStarRating(i) +
         "</div>";
       if (i % 2 == 1) {
@@ -660,10 +660,11 @@ function add_item(item, price, restaurant) {
   console.log(localStorage.getItem(id));
 }
 
-function finalize_order() {
+function go_to_finalize_order() {
   window.location = "finalize_order.html";
 }
 
+//called from finalize_order
 function next_order() {
 
   var name = document.form.name.value;
@@ -710,6 +711,7 @@ function next_order() {
   }
 }
 
+//loads page delivery.html
 function list_current_order() {
 
   var current_order = localStorage.getItem("current_order");
@@ -754,6 +756,7 @@ function list_current_order() {
 
 }
 
+//loads page my_orders.html
 function list_my_orders() {
 
   var my_orders = JSON.parse(localStorage.getItem("prevous_orders"));
