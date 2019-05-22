@@ -17,11 +17,13 @@
   <link rel="stylesheet" href="css/owl.carousel.css" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/animate.css" />
+  <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body  class="header-section"  onload="load_restaurants_from('Vracar')">
+<body onload="load_restaurants_from('Vracar')">
   <!-- Header section -->
-  <header style="background-color: black">
+  <header class="header-section" style="background-color: black">
     <div class="header-warp">
       <div class="site-logo">
         <!--TODO rename new index to index-->
@@ -30,9 +32,11 @@
         </h2>
       </div>
       <!-- responsive -->
+
       <div class="nav-switch">
         <i class="fa fa-bars"></i>
       </div>
+
       <!-- menu -->
       <ul class="main-menu">
         <li><a href="index.html">Pocetna</a></li>
@@ -70,6 +74,9 @@
   </header>
   <!-- Header section end -->
 
+  <!--dummy row DO NOT REMOVE-->
+  <div class="row" style="height: 100px"></div>
+  <!--dummy row over-->
 
   <!-- Bread crumbs -->
   <div class="row-fluid">
@@ -77,7 +84,7 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb bg-white">
           <li class="breadcrumb-item"><a style="color:black" href="index.html">Pocetna</a></li>
-          <li class="breadcrumb-item"><a style="color:black" href="restaurants.html">Restorani</a></li>
+          <li class="breadcrumb-item"><a  style="color:black" href="restaurants.html"> Restorani </a></li>
           <li class="breadcrumb-item" style="color:#ffc515" aria-current="page"> Vracar </li>
         </ol>
       </nav>
@@ -86,21 +93,42 @@
   <!-- Bread crumbs over -->
 
   <!--title section-->
-  <section class="inter-section spad">
-      <div class="container">
-        <div class="section-title">
-          <i class="flaticon-032-hamburger"></i>
-          <h2>Restorani Vracar</h2>
+  <section class="inter-section spad" style="padding-bottom:0; padding-top: 30px">
+    <div class="container">
+      <div class="section-title">
+        <i class="flaticon-032-hamburger"></i>
+        <h2>Restorani na Vracaru</h2>
+      </div>
+    </div>
+  </section>
+  <!--title section over-->
+
+  
+  <div class=container-fluid>
+    <div class="row">
+      <div class="offset-sm-2 col-sm-9" style="border:1px solid black; height:100px;">
+        Dugmad za sortove ili sta vec treba
+      </div>
+    </div>
+  </div>
+
+  <!-- main -->
+  <div class="container-fluid" style="padding-bottom: 130px">
+    <div class="row">
+      <div class="col-sm-2" style="border:1px solid black">
+        Ovde dodaj filtere
+      </div>
+      <div class="col-sm-10">
+        <div style = "padding-top:20px;" class="row" id="main_tag">
+
         </div>
       </div>
-    </section>
-    <!--title section over-->
-  
-  
-    <!--main-->
-    <div class="row" id="main_tag">
+
     </div>
-    <!--main over-->
+  </div>
+  <!--main over-->
+
+
 
   <!-- Footer section -->
   <footer class="footer-section">
@@ -127,6 +155,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
+
   <script src="js/bootstrap.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/circle-progress.min.js"></script>

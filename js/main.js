@@ -346,7 +346,7 @@ function init_index() {
       mun: "Novi Beograd", //opstina
       adr: "Adresa",
       img: "img/logo/soibiber.jpg", //lokacija slike
-      desc: "Lep restoran", //opis restorana
+      desc: "Lep restoranaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", //opis restorana
       page: " biber.html",
       page_en: " biber.html",
       meals: [
@@ -467,7 +467,7 @@ function load_top_restaurants() {
   document.getElementById("top3_link").href = top3_page;
   document.getElementById("top3_desc").innerHTML = top3_desc;
 }
-
+/*
 function addRating(id, rating) {
   var restaurants = JSON.parse(localStorage.getItem("restaurants"));
 
@@ -486,38 +486,27 @@ function getStarRating(id) {
   <input type=\"radio\" id=\"star1_" + id + "\" name=\"rating\" value=\"1\" onclick=\"addRating(" + id + ",1)\" /><label class = \"full\" for=\"star1_" + id + "\" title=\"Sucks big time - 1 star\"></label> \
 </fieldset>";
 }
-
+*/
 
 function load_all_restaurants() {
   var restaurants = JSON.parse(localStorage.getItem("restaurants"));
   var html_to_insert = "";
 
-  html_to_insert = html_to_insert +
-    "<div class = \"offset-sm-2 col-sm-8\" >";
+
   for (var i = 0; i < restaurants.length; i++) {
-
-    if (i % 2 == 0) {
-      html_to_insert += "<div class = \"row\">"
-    }
-    html_to_insert += "<div class = \"col-sm-2\">" +
-      "<img src = \"" + restaurants[i].img + "\" style=\"height: 100px\">" +
+    html_to_insert += (
+      "<div class=\"col-md-2 col-sm-6\" style = \"padding-top:20px\">" +
+      "<img src=\"" + restaurants[i].img + "\" style=\"width: 100%\">" +
       "</div>" +
-      "<div class = \"col-sm-4\" style =\"padding : 10px\">" +
-      "<h3 class = \"text-left\"><a style = \"color:black\"  href=\"" + restaurants[i].page + "\">" + restaurants[i].name + "</a></h3><br/>" +
-      "<p class = \"text-left\">" + restaurants[i].desc + "</p><br>" + getStarRating(i) +
-      "</div>";
-    if (i % 2 == 1) {
-      html_to_insert += "</div>";
-    }
+      "<div class=\"col-md-4 col-sm-6\" style=\"padding : 20px\">" +
+      "<h3 class=\"text-left \"><a style=\"color:black \" href=\"" + restaurants[i].page + "\">" + restaurants[i].name + "</a></h3>" +
+      "<p class=\"text-left\">" + restaurants[i].desc + "</p><br />" +
+      "</div>");
+
   }
 
-  if (restaurants.length % 2 == 1) {
-    html_to_insert += "</div>";
-  }
-
-
-  html_to_insert += "</div>";
   document.getElementById("main_tag").innerHTML = html_to_insert;
+
 
 }
 
@@ -533,35 +522,24 @@ function load_restaurants_from(mun) {
   }
 
   if (restaurants_from.length === 0) {
+
     window.alert("Nema restorana iz ove opstine");
     window.location = "index.html"                //note obrati paznju na jezik ovde !!s
+
   } else {
 
-    html_to_insert = html_to_insert +
-      "<div class = \"offset-sm-2 col-sm-8\" >";
     for (var i = 0; i < restaurants_from.length; i++) {
-
-      if (i % 2 == 0) {
-        html_to_insert += "<div class = \"row\">"
-      }
-      html_to_insert += "<div class = \"col-sm-2\">" +
-        "<img src = \"" + restaurants_from[i].img + "\" style=\"height: 100px\">" +
+      html_to_insert += (
+        "<div class=\"col-md-2 col-sm-6\">" +
+        "<img src=\"" + restaurants_from[i].img + "\" style=\"width: 100%\">" +
         "</div>" +
-        "<div class = \"col-sm-4\" style =\"padding : 10px\">" +
-        "<h3 class = \"text-left\"><a style = \"color:black\" href=\"" + restaurants_from[i].page + "\">" + restaurants_from[i].name + "</a></h3><br/>" +
-        "<p class = \"text-left\">" + restaurants_from[i].desc + "</p><br>" + getStarRating(i) +
-        "</div>";
-      if (i % 2 == 1) {
-        html_to_insert += "</div>";
-      }
+        "<div class=\"col-md-4 col-sm-6\" style=\"padding : 10px\">" +
+        "<h3 class=\"text-left \"><a style=\"color:black \" href=\"" + restaurants_from[i].page + "\">" + restaurants_from[i].name + "</a></h3>" +
+        "<p class=\"text-left\">" + restaurants_from[i].desc + "</p><br />" +
+        "</div>");
+
     }
 
-    if (restaurants_from.length % 2 == 1) {
-      html_to_insert += "</div>";
-    }
-
-
-    html_to_insert += "</div>";
     document.getElementById("main_tag").innerHTML = html_to_insert;
   }
 }
@@ -774,34 +752,34 @@ function list_my_orders() {
     html_to_insert = html_to_insert + " <table class=\"table table-striped\">" +
       "<tbody>" +
       "<tr>" +
-      "<td align=\"center\">Ime :</td>" + 
-    "<td align=\"center\">" + my_orders[i].name + "</td>" +
+      "<td align=\"center\">Ime :</td>" +
+      "<td align=\"center\">" + my_orders[i].name + "</td>" +
       "</tr>" +
       "<tr>" +
       "<td align=\"center\">Preizme :</td>" +
-    "<td align=\"center\">" + my_orders[i].surname + "</td>" +
+      "<td align=\"center\">" + my_orders[i].surname + "</td>" +
       "</tr>" +
       "<tr>" +
       "<td align=\"center\">Adresa :</td>" +
-    "<td align=\"center\">" + my_orders[i].addr + "</td>" +
+      "<td align=\"center\">" + my_orders[i].addr + "</td>" +
       "</tr>" +
       "<tr>" +
       "<td align=\"center\">Email :</td>" +
-    "<td align=\"center\">" + my_orders[i].email + "</td>" +
+      "<td align=\"center\">" + my_orders[i].email + "</td>" +
       "</tr>" +
       "<tr>" +
       "<td align=\"center\">Telefon :</td>" +
-    "<td align=\"center\">" + my_orders[i].phone + "</td>"+
-    "</tr>";
+      "<td align=\"center\">" + my_orders[i].phone + "</td>" +
+      "</tr>";
 
     //TODO meals
     var meals = JSON.parse(my_orders[i].meals);
-    for(var j = 0; j < meals.length; j++){
-      html_to_insert = html_to_insert + 
-      "<tr>" +
-      "<td align=\"center\">Jelo :</td>" +
-    "<td align=\"center\">" + meals[j].item + " iz " + meals[j].restaurant + "</td>"+
-    "</tr>";
+    for (var j = 0; j < meals.length; j++) {
+      html_to_insert = html_to_insert +
+        "<tr>" +
+        "<td align=\"center\">Jelo :</td>" +
+        "<td align=\"center\">" + meals[j].item + " iz " + meals[j].restaurant + "</td>" +
+        "</tr>";
     }
 
     //close table

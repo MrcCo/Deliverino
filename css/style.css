@@ -1286,6 +1286,7 @@ ol {
 
 @media only screen and (max-width: 1550px) {
   .main-menu {
+    padding-top: 20px;
     padding-right: 70px;
   }
   .main-menu li a {
@@ -1304,6 +1305,7 @@ ol {
     width: 180px;
   }
   .main-menu {
+    padding-top: 20px;  
     padding-right: 20px;
   }
   .main-menu li a {
@@ -1502,4 +1504,8 @@ ol {
   height: 200px;
 
   object-fit: scale-down;
+}
+
+div{
+  overflow-wrap: break-word;
 }
