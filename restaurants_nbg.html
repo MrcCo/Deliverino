@@ -17,11 +17,13 @@
   <link rel="stylesheet" href="css/owl.carousel.css" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/animate.css" />
+  <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body onload="load_restaurants_from('Novi Beograd')">
   <!-- Header section -->
-  <header style="background-color: black">
+  <header class="header-section" style="background-color: black">
     <div class="header-warp">
       <div class="site-logo">
         <!--TODO rename new index to index-->
@@ -30,9 +32,11 @@
         </h2>
       </div>
       <!-- responsive -->
+
       <div class="nav-switch">
         <i class="fa fa-bars"></i>
       </div>
+
       <!-- menu -->
       <ul class="main-menu">
         <li><a href="index.html">Pocetna</a></li>
@@ -98,7 +102,10 @@
 
 
   <!--main-->
-  <div class="row" id="main_tag">
+  <div class="row">
+    <div class = "offset-sm-2 col-sm-8" id = "main_tag">
+      
+    </div>
   </div>
   <!--main over-->
 
@@ -128,6 +135,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
+
   <script src="js/bootstrap.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/circle-progress.min.js"></script>
