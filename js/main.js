@@ -749,7 +749,11 @@ function list_my_orders() {
 
   for (var i = 0; i < my_orders.length; i++) {
 
-    html_to_insert = html_to_insert + " <table class=\"table table-striped\">" +
+    var sum = 0;
+
+    html_to_insert = html_to_insert + "<div class = \"col-sm-12 col-md-6\">" +
+      "<h3 align = \"center\" > Porudzbina broj: " + (+i + 1) + "</h3>" +
+      " <table class=\"table table-striped\">" +
       "<tbody>" +
       "<tr>" +
       "<td align=\"center\">Ime :</td>" +
@@ -780,11 +784,21 @@ function list_my_orders() {
         "<td align=\"center\">Jelo :</td>" +
         "<td align=\"center\">" + meals[j].item + " iz " + meals[j].restaurant + "</td>" +
         "</tr>";
+
+      sum = +sum + meals[j].price;
     }
+
+    //add total price
+    html_to_insert = html_to_insert +
+      "<tr>" +
+      "<td align=\"center\">Ukupna cena:</td>" +
+      "<td align=\"center\">" + sum + "</td>" +
+      "</tr>";
+
 
     //close table
     html_to_insert = html_to_insert +
-      "</tbody> </table>";
+      "</tbody> </table></div>";
 
   }
 

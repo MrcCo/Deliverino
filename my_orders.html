@@ -21,7 +21,7 @@
 
 <body onload="list_my_orders()">
   <!-- Header section -->
-  <header  class="header-section"  style="background-color: black">
+  <header class="header-section" style="background-color: black">
     <div class="header-warp">
       <div class="site-logo">
         <!--TODO rename new index to index-->
@@ -70,6 +70,10 @@
   </header>
   <!-- Header section end -->
 
+  <!--dummy row DO NOT REMOVE-->
+  <div class="row" style="height: 100px"></div>
+  <!--dummy row over-->
+
   <!-- Bread crumbs -->
   <div class="row-fluid">
     <div class="offset-sm-2 col-sm-6" style="padding-top: 20px">
@@ -83,11 +87,25 @@
   </div>
   <!-- Bread crumbs over -->
 
-  <!--main body-->
-  <div class="container">
-    <div class="row">
-      <div id="orders" class="offset-sm-3 col-sm-6">
 
+  <div class="container">
+    <section class="inter-section spad" style="padding-bottom:0; padding-top: 30px">
+      <div class="container">
+        <div class="section-title">
+          <i class="flaticon-022-tray"></i>
+          <h2 >Moje narudzbine</h2>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  <!--main body-->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="offset-sm-1 col-sm-10">
+        <div id = "orders" class="row">
+
+        </div>
       </div>
     </div>
   </div>
