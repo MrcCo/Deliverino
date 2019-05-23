@@ -178,6 +178,9 @@ function init_index() {
       desc: "Lep restoran", //opis restorana
       page: " atos.html",
       page_en: " atos.html",
+      menu_page: "atos_menu.html",
+      menu_page_en: "atos_menu_en.html",
+      meal_types: "Italijanska kuhinja",
       meals: [
         {
           "name": "Teleca corba",
@@ -235,6 +238,9 @@ function init_index() {
       desc: "Lep restoran", //opis restorana
       page: " nik.html",
       page_en: " nik.html",
+      menu_page: "nik_menu.html",
+      menu_page_en: "nik_menu_en.html",
+      meal_types: "Domaca kuhinja",
       meals: [
         {
           "name": "Teleca corba",
@@ -292,6 +298,9 @@ function init_index() {
       desc: "Lep restoran", //opis restorana
       page: " frans.html",
       page_en: " frans.html",
+      menu_page: "frans_menu.html",
+      menu_page_en: "frans_menu_en.html",
+      meal_types: "Domaca kuhinja",
       meals: [
         {
           "name": "Teleca corba",
@@ -346,9 +355,12 @@ function init_index() {
       mun: "Novi Beograd", //opstina
       adr: "Adresa",
       img: "img/logo/soibiber.jpg", //lokacija slike
-      desc: "Lep restoranaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", //opis restorana
+      desc: "Lep restoran", //opis restorana
       page: " biber.html",
       page_en: " biber.html",
+      menu_page: "biber_menu.html",
+      menu_page_en: "biber_menu.html",
+      meal_types: "Domaca kuhinja",
       meals: [
         {
           "name": "Teleca corba",
@@ -396,13 +408,133 @@ function init_index() {
     };
     restaurants.push(SoIBiber);
 
+    var Poncho = {
+      name: "Poncho", //ime restorana
+      sum: 0, //suma ocena
+      count: 0, //broj ocena (da bi smo mogli nakon ocenjivanja da racunamo prosek)
+      mun: "Zvezdara", //opstina
+      adr: "Adresa",
+      img: "img/logo/poncho.jpeg", //lokacija slike
+      desc: "Lep restoran", //opis restorana
+      page: " poncho.html",
+      page_en: " poncho.html",
+      menu_page: "poncho_menu.html",
+      menu_page_en: "poncho_menu_en.html",
+      meal_types: "Brza hrana",
+      meals: [
+        {
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },
+        {
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },
+        {
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },
+        {
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },
+        {
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },
+        {
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },
+        {
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        }
+      ]
+    };
+    restaurants.push(Poncho);
+
+    var Marukoshi = {
+      name: "Marukoshi", //ime restorana
+      sum: 0, //suma ocena
+      count: 0, //broj ocena (da bi smo mogli nakon ocenjivanja da racunamo prosek)
+      mun: "Stari Grad", //opstina
+      adr: "Adresa",
+      img: "img/logo/marukoshi.jpg", //lokacija slike
+      desc: "Lep restoran", //opis restorana
+      page: " marukoshi.html",
+      page_en: " marukoshi.html",
+      menu_page: "marukoshi_menu.html",
+      menu_page_en: "marukoshi_menu_en.html",
+      meal_types: "Japanska hrana",
+      meals: [
+        {
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },
+        {
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },
+        {
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },
+        {
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },
+        {
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },
+        {
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },
+        {
+          "name": "Teleca corba",
+          "price": 350,
+          "desc": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        }
+      ]
+    };
+    restaurants.push(Marukoshi);
+
+
     sort_by_avg(restaurants);
 
     //store sorted restaurants to localstorage
     localStorage.setItem("restaurants", JSON.stringify(restaurants));
     console.log(restaurants);
   }
-
 
   load_top_restaurants();
 }
@@ -510,6 +642,30 @@ function load_all_restaurants() {
 
 }
 
+
+function load_all_restaurants_delivery() {
+  var restaurants = JSON.parse(localStorage.getItem("restaurants"));
+  var html_to_insert = "";
+
+
+  for (var i = 0; i < restaurants.length; i++) {
+    html_to_insert += (
+      "<div class=\"col-md-2 col-sm-6\" style = \"padding-top:20px\">" +
+      "<img src=\"" + restaurants[i].img + "\" style=\"width: 100%\">" +
+      "</div>" +
+      "<div class=\"col-md-4 col-sm-6\" style=\"padding : 20px\">" +
+      "<h3 class=\"text-left \"><a style=\"color:black \" href=\"" + restaurants[i].menu_page + "\">" + restaurants[i].name + "</a></h3>" +
+      "<p class=\"text-left\">" + restaurants[i].desc + "</p><br />" +
+      "</div>");
+
+  }
+
+  document.getElementById("main_tag").innerHTML = html_to_insert;
+
+
+}
+
+
 function load_restaurants_from(mun) {
   var restaurants = JSON.parse(localStorage.getItem("restaurants"));
   var html_to_insert = "";
@@ -544,7 +700,7 @@ function load_restaurants_from(mun) {
   }
 }
 
-function load_single_restaurant(name) {
+function load_single_restaurant_menu(name) {
 
   var html_to_insert = "";
   var restaurants = JSON.parse(localStorage.getItem("restaurants"));
@@ -552,7 +708,8 @@ function load_single_restaurant(name) {
   var meal_count;
 
   //add restaurant name to the breadcrumb
-  document.getElementById("bc_restaurant").innerHTML = name;
+  //PAZITI NA JEZIK!!!
+  document.getElementById("bc_restaurant").innerHTML = name + " meni";
   document.getElementById("rest_name").innerHTML = name + "<span>.</span>";
   //get data bout the restaurant
   for (var i = 0; i < restaurants.length; i++) {
@@ -607,11 +764,20 @@ function load_single_restaurant(name) {
     html_to_insert = html_to_insert +
       "</div> </div> </div> </div> ";
 
+    html_to_insert = html_to_insert +
+    "<div class = \"offset-sm-6 col-sm-1\">" +
+      "<button class=\"btn btn-warning\" onclick = \"go_to_current_order()\"> Naruci </button>" +
+    "</div>";
 
     document.getElementById("menu").innerHTML = html_to_insert;
   } else {
     window.alert("Ne postoji restoran!!!");
   }
+}
+
+function load_single_restaurant(name) {
+  document.getElementById("bc_restaurant").innerHTML = name;
+  document.getElementById("title").innerHTML = name;
 }
 
 //add item to local storage on index - restaurant 
@@ -640,6 +806,10 @@ function add_item(item, price, restaurant) {
 
 function go_to_finalize_order() {
   window.location = "finalize_order.html";
+}
+
+function go_to_current_order(){
+  window.location = "current_order.html";
 }
 
 //called from finalize_order
