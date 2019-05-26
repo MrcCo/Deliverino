@@ -111,11 +111,13 @@
   <div class="container-fluid" style="padding-bottom: 130px">
     <div class="row">
       <div class="col-sm-2" style="border:1px solid black">
-        Ovde dodaj filtere <br/>
-        Tipovi hrane:<br/>
-        "Italijanska kuhinja"</br>
-        "Domaca kuhinja" </br>
-        "Brza hrana"</br>
+        <h2>Filteri</h2>
+        <br>
+        Kuhinje: <br/>
+        <input type="checkbox" id="Kuhinja-BrzaHrana" name="Kuhinja-BrzaHrana" onclick="load_all_restaurants()"><label for="Kuhinja-BrzaHrana">Brza Hrana</label><br>
+        <input type="checkbox" id="Kuhinja-DomacaKuhinja" name="Kuhinja-DomacaKuhinja" onclick="load_all_restaurants()"><label for="Kuhinja-DomacaKuhinja">Domaca Kuhinja</label><br>
+        <input type="checkbox" id="Kuhinja-Italijanska" name="Kuhinja-Italijanska" onclick="load_all_restaurants()"><label for="Kuhinja-Italijanska">Italijanska Hrana</label><br>
+        <input type="checkbox" id="Kuhinja-Japanska" name="Kuhinja-Japanska" onclick="load_all_restaurants()"><label for="Kuhinja-Japanska">Japasnka</label><br>
       </div>
       <div class="col-sm-10">
         <div style="padding-top:20px;" class="row" id="main_tag">

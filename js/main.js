@@ -620,10 +620,41 @@ function getStarRating(id) {
 }
 */
 
+function filterRestaurants(restaurants) {
+
+  var labelToMealType = {
+    "Kuhinja-BrzaHrana": "Brza hrana",
+    "Kuhinja-DomacaKuhinja": "Domaca kuhinja",
+    "Kuhinja-Italijanska": "Italijanska kuhinja",
+    "Kuhinja-Japanska": "Japanska hrana"
+  }
+
+  // If no labels are checked, return all restaurants.
+  var filterMealTypes = [];
+
+  for (var labelId in labelToMealType) {
+    if (document.getElementById(labelId).checked == true)
+      filterMealTypes.push(labelToMealType[labelId])
+  }
+
+  if (filterMealTypes.length == 0)
+    return restaurants;
+
+  var filteredRestaurants = [];
+
+  for (var i = 0; i < restaurants.length; i++) {
+    if (filterMealTypes.includes(restaurants[i].meal_types))
+      filteredRestaurants.push(restaurants[i]);
+  }  
+  
+  return filteredRestaurants;
+}
+
 function load_all_restaurants() {
   var restaurants = JSON.parse(localStorage.getItem("restaurants"));
   var html_to_insert = "";
 
+  restaurants = filterRestaurants(restaurants);
 
   for (var i = 0; i < restaurants.length; i++) {
     html_to_insert += (
@@ -638,8 +669,6 @@ function load_all_restaurants() {
   }
 
   document.getElementById("main_tag").innerHTML = html_to_insert;
-
-
 }
 
 
@@ -661,8 +690,6 @@ function load_all_restaurants_delivery() {
   }
 
   document.getElementById("main_tag").innerHTML = html_to_insert;
-
-
 }
 
 
@@ -680,9 +707,12 @@ function load_restaurants_from(mun) {
   if (restaurants_from.length === 0) {
 
     window.alert("Nema restorana iz ove opstine");
-    window.location = "index.html"                //note obrati paznju na jezik ovde !!s
+    window.location = "index.html"                //note obrati paznju na jezik ovde !!
 
   } else {
+
+    // Filter restaurants
+    restaurants_from = filterRestaurants(restaurants_from);
 
     for (var i = 0; i < restaurants_from.length; i++) {
       html_to_insert += (
@@ -693,7 +723,6 @@ function load_restaurants_from(mun) {
         "<h3 class=\"text-left \"><a style=\"color:black \" href=\"" + restaurants_from[i].page + "\">" + restaurants_from[i].name + "</a></h3>" +
         "<p class=\"text-left\">" + restaurants_from[i].desc + "</p><br />" +
         "</div>");
-
     }
 
     document.getElementById("main_tag").innerHTML = html_to_insert;
@@ -974,4 +1003,8 @@ function list_my_orders() {
 
   document.getElementById("orders").innerHTML = html_to_insert;
 
+}
+
+function reloadRestaurants() {
+  console.log(123);
 }
