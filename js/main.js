@@ -1006,6 +1006,35 @@ function list_my_orders() {
 
 }
 
-function reloadRestaurants() {
-  console.log(123);
+function exportOrdersToPdf(orders) {
+  var doc = new jsPDF();
+
+  var my_orders = JSON.parse(localStorage.getItem("prevous_orders"));
+
+  var A4_CENTER = 105;
+
+  // Header
+  var aboveHeader = 10;
+  doc.text("My Orders", A4_CENTER, aboveHeader, {align: "center"});
+
+  // Body
+  var marginBetweeenOrders = 10;
+  var marginAfterText = 10;
+
+  console.log(my_orders);
+
+  var current_y = aboveHeader + marginAfterText + marginBetweeenOrders;
+  for (var i = 0; i < my_orders.length; i++) {
+
+    var orderName = "Order #" + (i + 1);
+    doc.text(orderName, 10, current_y);
+
+    var osobaText = "Osoba: " + my_orders[i].name + " " + my_orders[i].surname + ", " + my_orders[i].addr;
+    doc.text(osobaText, 10, current_y + marginAfterText);
+
+
+    current_y += 2 * marginAfterText + marginBetweeenOrders;
+  }
+
+  doc.save('MyOrders.pdf');
 }
