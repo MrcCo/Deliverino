@@ -676,6 +676,7 @@ function load_all_restaurants_delivery() {
   var restaurants = JSON.parse(localStorage.getItem("restaurants"));
   var html_to_insert = "";
 
+  restaurants = filterRestaurants(restaurants);
 
   for (var i = 0; i < restaurants.length; i++) {
     html_to_insert += (
