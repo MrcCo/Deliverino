@@ -1083,12 +1083,27 @@ function exportOrdersToPdf(orders) {
     var orderName = "Order #" + (i + 1);
     doc.text(orderName, 10, current_y);
 
-    var osobaText = "Osoba: " + my_orders[i].name + " " + my_orders[i].surname + ", " + my_orders[i].addr;
+    var osobaText = "Contact: " + my_orders[i].name + " " + my_orders[i].surname + ", " + my_orders[i].addr;
     doc.text(osobaText, 10, current_y + marginAfterText);
 
+    var meals = JSON.parse(my_orders[i].meals);
 
-    current_y += 2 * marginAfterText + marginBetweeenOrders;
+    var totalPrice = 0;
+    for (var j = 0; j < meals.length; j++) {
+      
+      var mealText = "Meal #" + (j + 1) + ": " + meals[j].item;
+      doc.text(mealText, 10, current_y + (2 + j) * marginAfterText)
+
+      totalPrice += meals[j].price;
+    }
+
+    var totalPriceText = "Total Price: " + totalPrice;
+    doc.text(totalPriceText, 10, current_y + (2 + meals.length) * marginAfterText);
+
+    current_y += (3 + meals.length) * marginAfterText + marginBetweeenOrders;
   }
+
+
 
   doc.save('MyOrders.pdf');
 }
