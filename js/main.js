@@ -650,11 +650,52 @@ function filterRestaurants(restaurants) {
   return filteredRestaurants;
 }
 
-function load_all_restaurants() {
+function sort_restaurants(restaurants, sortOrder) {
+  if (sortOrder == 1) {
+    restaurants.sort(function (a,b) {
+      var x = a.name.toLowerCase();
+      var y = b.name.toLowerCase();
+
+      if (x < y) return -1;
+      if (x > y) return 1;
+      return 0;
+    });
+
+    return restaurants;
+  }
+  else if (sortOrder == 2) {
+    restaurants.sort(function (a,b) {
+      var x = a.name.toLowerCase();
+      var y = b.name.toLowerCase();
+
+      if (x < y) return 1;
+      if (x > y) return -1;
+      return 0;
+    });
+
+    return restaurants;
+  }
+  else {
+    alert ("BAD SORT ORDER");
+    return [];
+  }
+}
+
+function setSortOrder(sortOrder) {
+  localStorage.setItem("restaurantsSortOrder", sortOrder);
+}
+
+function load_all_restaurants(resetSortOrder) {
   var restaurants = JSON.parse(localStorage.getItem("restaurants"));
   var html_to_insert = "";
 
   restaurants = filterRestaurants(restaurants);
+
+  if (resetSortOrder)
+    localStorage.setItem("restaurantsSortOrder", 1);
+
+  var sortOrder = localStorage.getItem("restaurantsSortOrder");
+  restaurants = sort_restaurants(restaurants, sortOrder);
 
   for (var i = 0; i < restaurants.length; i++) {
     html_to_insert += (
@@ -672,11 +713,17 @@ function load_all_restaurants() {
 }
 
 
-function load_all_restaurants_delivery() {
+function load_all_restaurants_delivery(resetSortOrder) {
   var restaurants = JSON.parse(localStorage.getItem("restaurants"));
   var html_to_insert = "";
 
   restaurants = filterRestaurants(restaurants);
+
+  if (resetSortOrder)
+    localStorage.setItem("restaurantsSortOrder", 1);
+
+  var sortOrder = localStorage.getItem("restaurantsSortOrder");
+  restaurants = sort_restaurants(restaurants, sortOrder);
 
   for (var i = 0; i < restaurants.length; i++) {
     html_to_insert += (
@@ -694,7 +741,7 @@ function load_all_restaurants_delivery() {
 }
 
 
-function load_restaurants_from(mun) {
+function load_restaurants_from(mun, resetSortOrder) {
   var restaurants = JSON.parse(localStorage.getItem("restaurants"));
   var html_to_insert = "";
   var restaurants_from = [];
@@ -714,6 +761,13 @@ function load_restaurants_from(mun) {
 
     // Filter restaurants
     restaurants_from = filterRestaurants(restaurants_from);
+
+    // Sort restaurants.
+    if (resetSortOrder)
+      localStorage.setItem("restaurantsSortOrder", 1);
+
+    var sortOrder = localStorage.getItem("restaurantsSortOrder");
+    restaurants_from = sort_restaurants(restaurants_from, sortOrder);
 
     for (var i = 0; i < restaurants_from.length; i++) {
       html_to_insert += (

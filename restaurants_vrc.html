@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body onload="load_restaurants_from('Vracar')">
+<body onload="load_restaurants_from('Vracar', true)">
   <!-- Header section -->
   <header class="header-section" style="background-color: black">
     <div class="header-warp">
@@ -107,7 +107,8 @@
   <div class=container-fluid>
     <div class="row">
       <div class="offset-sm-2 col-sm-9" style="border:1px solid black; height:100px;">
-        Dugmad za sortove ili sta vec treba
+        <button type="button" onclick="setSortOrder(1);load_restaurants_from('Vracar', false)">A-Z</button>
+        <button type="button" onclick="setSortOrder(2);load_restaurants_from('Vracar', false)">Z-A</button>
       </div>
     </div>
   </div>
@@ -119,10 +120,10 @@
         <h2>Filteri</h2>
         <br>
         Kuhinje: <br/>
-        <input type="checkbox" id="Kuhinja-BrzaHrana" name="Kuhinja-BrzaHrana" onclick="load_restaurants_from('Vracar')"><label for="Kuhinja-BrzaHrana">Brza Hrana</label><br>
-        <input type="checkbox" id="Kuhinja-DomacaKuhinja" name="Kuhinja-DomacaKuhinja" onclick="load_restaurants_from('Vracar')"><label for="Kuhinja-DomacaKuhinja">Domaca Kuhinja</label><br>
-        <input type="checkbox" id="Kuhinja-Italijanska" name="Kuhinja-Italijanska" onclick="load_restaurants_from('Vracar')"><label for="Kuhinja-Italijanska">Italijanska Hrana</label><br>
-        <input type="checkbox" id="Kuhinja-Japanska" name="Kuhinja-Japanska" onclick="load_restaurants_from('Vracar')"><label for="Kuhinja-Japanska">Japasnka</label><br>
+        <input type="checkbox" id="Kuhinja-BrzaHrana" name="Kuhinja-BrzaHrana" onclick="load_restaurants_from('Vracar', false)"><label for="Kuhinja-BrzaHrana">Brza Hrana</label><br>
+        <input type="checkbox" id="Kuhinja-DomacaKuhinja" name="Kuhinja-DomacaKuhinja" onclick="load_restaurants_from('Vracar', false)"><label for="Kuhinja-DomacaKuhinja">Domaca Kuhinja</label><br>
+        <input type="checkbox" id="Kuhinja-Italijanska" name="Kuhinja-Italijanska" onclick="load_restaurants_from('Vracar', false)"><label for="Kuhinja-Italijanska">Italijanska Hrana</label><br>
+        <input type="checkbox" id="Kuhinja-Japanska" name="Kuhinja-Japanska" onclick="load_restaurants_from('Vracar', false)"><label for="Kuhinja-Japanska">Japasnka</label><br>
       </div>
       <div class="col-sm-10">
         <div style = "padding-top:20px;" class="row" id="main_tag">
