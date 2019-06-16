@@ -160,11 +160,11 @@ $(window).on("load", function () {
 function init_index() {
   var restaurants = [];
   //first load
-  if (localStorage.getItem("init_finished") == null) {
+  if (sessionStorage.getItem("init_finished") == null) {
     //flag that restaurants are already initialized
-    localStorage.setItem("init_finished", true);
+    sessionStorage.setItem("init_finished", true);
 
-    localStorage.setItem("current_order", 0);
+    sessionStorage.setItem("current_order", 0);
 
     //create restaurants
     //TODO add more restaurants
@@ -176,54 +176,62 @@ function init_index() {
       adr: "Adresa",
       img: "img/logo/atos.jpeg", //lokacija slike
       desc: "Lep restoran", //opis restorana
+      desc_en : "Lovely restaurant",
       page: " atos.html",
-      page_en: " atos.html",
+      page_en: " atos_en.html",
       menu_page: "atos_menu.html",
       menu_page_en: "atos_menu_en.html",
       meal_types: "Italijanska kuhinja",
       meals: [
         {
           "name": "Teleca corba",
+          "name_en" : "Veal stew",
           "price": 350,
-          "desc": "Tasty",
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },
+       
+        {
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
           "img": "img/food/teleca_corba.jpg"
         },
         {
           "name": "Teleca corba",
+          "name_en" : "Veal stew",
           "price": 350,
-          "desc": "Tasty",
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
           "img": "img/food/teleca_corba.jpg"
         },
         {
           "name": "Teleca corba",
+          "name_en" : "Veal stew",
           "price": 350,
-          "desc": "Tasty",
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
           "img": "img/food/teleca_corba.jpg"
         },
         {
           "name": "Teleca corba",
+          "name_en" : "Veal stew",
           "price": 350,
-          "desc": "Tasty",
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
           "img": "img/food/teleca_corba.jpg"
         },
         {
           "name": "Teleca corba",
+          "name_en" : "Veal stew",
           "price": 350,
-          "desc": "Tasty",
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
           "img": "img/food/teleca_corba.jpg"
         },
-        {
-          "name": "Teleca corba",
-          "price": 350,
-          "desc": "Tasty",
-          "img": "img/food/teleca_corba.jpg"
-        },
-        {
-          "name": "Teleca corba",
-          "price": 350,
-          "desc": "Tasty",
-          "img": "img/food/teleca_corba.jpg"
-        }
       ]
     };
     restaurants.push(Atos);
@@ -236,6 +244,7 @@ function init_index() {
       adr: "Adresa",
       img: "img/logo/cheznik.jpg", //lokacija slike
       desc: "Lep restoran", //opis restorana
+      desc_en : "Lovely restaurant",
       page: " nik.html",
       page_en: " nik.html",
       menu_page: "nik_menu.html",
@@ -244,46 +253,61 @@ function init_index() {
       meals: [
         {
           "name": "Teleca corba",
+          "name_en" : "Veal stew",
           "price": 350,
-          "desc": "Tasty",
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
           "img": "img/food/teleca_corba.jpg"
         },
-        {
-          "name": "Teleca corba",
-          "price": 350,
-          "desc": "Tasty",
-          "img": "img/food/teleca_corba.jpg"
-        },
-        {
-          "name": "Teleca corba",
-          "price": 350,
-          "desc": "Tasty",
-          "img": "img/food/teleca_corba.jpg"
-        },
-        {
-          "name": "Teleca corba",
-          "price": 350,
-          "desc": "Tasty",
-          "img": "img/food/teleca_corba.jpg"
-        },
-        {
-          "name": "Teleca corba",
-          "price": 350,
-          "desc": "Tasty",
-          "img": "img/food/teleca_corba.jpg"
-        },
-        {
-          "name": "Teleca corba",
-          "price": 350,
-          "desc": "Tasty",
-          "img": "img/food/teleca_corba.jpg"
-        },
-        {
-          "name": "Teleca corba",
-          "price": 350,
-          "desc": "Tasty",
-          "img": "img/food/teleca_corba.jpg"
-        }
       ]
     };
     restaurants.push(ChezNik);
@@ -296,6 +320,7 @@ function init_index() {
       adr: "Adresa",
       img: "img/logo/frans.jpg", //lokacija slike
       desc: "Lep restoran", //opis restorana
+      desc_en : "Lovely restaurant",
       page: " frans.html",
       page_en: " frans.html",
       menu_page: "frans_menu.html",
@@ -304,58 +329,88 @@ function init_index() {
       meals: [
         {
           "name": "Teleca corba",
+          "name_en" : "Veal stew",
           "price": 350,
-          "desc": "Tasty",
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
           "img": "img/food/teleca_corba.jpg"
         },
-        {
-          "name": "Teleca corba",
-          "price": 350,
-          "desc": "Tasty",
-          "img": "img/food/teleca_corba.jpg"
-        },
-        {
-          "name": "Teleca corba",
-          "price": 350,
-          "desc": "Tasty",
-          "img": "img/food/teleca_corba.jpg"
-        },
-        {
-          "name": "Teleca corba",
-          "price": 350,
-          "desc": "Tasty",
-          "img": "img/food/teleca_corba.jpg"
-        },
-        {
-          "name": "Teleca corba",
-          "price": 350,
-          "desc": "Tasty",
-          "img": "img/food/teleca_corba.jpg"
-        },
-        {
-          "name": "Teleca corba",
-          "price": 350,
-          "desc": "Tasty",
-          "img": "img/food/teleca_corba.jpg"
-        },
-        {
-          "name": "Teleca corba",
-          "price": 350,
-          "desc": "Tasty",
-          "img": "img/food/teleca_corba.jpg"
-        }
       ]
     };
     restaurants.push(Frans);
 
     var SoIBiber = {
       name: "So i biber", //ime restorana
-      sum: 0, //suma ocena
-      count: 0, //broj ocena (da bi smo mogli nakon ocenjivanja da racunamo prosek)
+      sum: 8, //suma ocena
+      count: 3, //broj ocena (da bi smo mogli nakon ocenjivanja da racunamo prosek)
       mun: "Novi Beograd", //opstina
       adr: "Adresa",
       img: "img/logo/soibiber.jpg", //lokacija slike
       desc: "Lep restoran", //opis restorana
+      desc_en : "Lovely restaurant",
       page: " biber.html",
       page_en: " biber.html",
       menu_page: "biber_menu.html",
@@ -364,58 +419,102 @@ function init_index() {
       meals: [
         {
           "name": "Teleca corba",
+          "name_en" : "Veal stew",
           "price": 350,
-          "desc": "Tasty",
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
           "img": "img/food/teleca_corba.jpg"
         },
-        {
-          "name": "Teleca corba",
-          "price": 350,
-          "desc": "Tasty",
-          "img": "img/food/teleca_corba.jpg"
-        },
-        {
-          "name": "Teleca corba",
-          "price": 350,
-          "desc": "Tasty",
-          "img": "img/food/teleca_corba.jpg"
-        },
-        {
-          "name": "Teleca corba",
-          "price": 350,
-          "desc": "Tasty",
-          "img": "img/food/teleca_corba.jpg"
-        },
-        {
-          "name": "Teleca corba",
-          "price": 350,
-          "desc": "Tasty",
-          "img": "img/food/teleca_corba.jpg"
-        },
-        {
-          "name": "Teleca corba",
-          "price": 350,
-          "desc": "Tasty",
-          "img": "img/food/teleca_corba.jpg"
-        },
-        {
-          "name": "Teleca corba",
-          "price": 350,
-          "desc": "Tasty",
-          "img": "img/food/teleca_corba.jpg"
-        }
       ]
     };
     restaurants.push(SoIBiber);
 
     var Poncho = {
       name: "Poncho", //ime restorana
-      sum: 0, //suma ocena
-      count: 0, //broj ocena (da bi smo mogli nakon ocenjivanja da racunamo prosek)
+      sum: 4, //suma ocena
+      count: 1, //broj ocena (da bi smo mogli nakon ocenjivanja da racunamo prosek)
       mun: "Zvezdara", //opstina
       adr: "Adresa",
       img: "img/logo/poncho.jpeg", //lokacija slike
       desc: "Lep restoran", //opis restorana
+      desc_en : "Lovely restaurant",
       page: " poncho.html",
       page_en: " poncho.html",
       menu_page: "poncho_menu.html",
@@ -424,58 +523,109 @@ function init_index() {
       meals: [
         {
           "name": "Teleca corba",
+          "name_en" : "Veal stew",
           "price": 350,
-          "desc": "Tasty",
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
           "img": "img/food/teleca_corba.jpg"
         },
-        {
-          "name": "Teleca corba",
-          "price": 350,
-          "desc": "Tasty",
-          "img": "img/food/teleca_corba.jpg"
-        },
-        {
-          "name": "Teleca corba",
-          "price": 350,
-          "desc": "Tasty",
-          "img": "img/food/teleca_corba.jpg"
-        },
-        {
-          "name": "Teleca corba",
-          "price": 350,
-          "desc": "Tasty",
-          "img": "img/food/teleca_corba.jpg"
-        },
-        {
-          "name": "Teleca corba",
-          "price": 350,
-          "desc": "Tasty",
-          "img": "img/food/teleca_corba.jpg"
-        },
-        {
-          "name": "Teleca corba",
-          "price": 350,
-          "desc": "Tasty",
-          "img": "img/food/teleca_corba.jpg"
-        },
-        {
-          "name": "Teleca corba",
-          "price": 350,
-          "desc": "Tasty",
-          "img": "img/food/teleca_corba.jpg"
-        }
       ]
     };
     restaurants.push(Poncho);
 
     var Marukoshi = {
       name: "Marukoshi", //ime restorana
-      sum: 0, //suma ocena
-      count: 0, //broj ocena (da bi smo mogli nakon ocenjivanja da racunamo prosek)
+      sum: 10, //suma ocena
+      count: 2, //broj ocena (da bi smo mogli nakon ocenjivanja da racunamo prosek)
       mun: "Stari Grad", //opstina
       adr: "Adresa",
       img: "img/logo/marukoshi.jpg", //lokacija slike
       desc: "Lep restoran", //opis restorana
+      desc_en : "Lovely restaurant",
       page: " marukoshi.html",
       page_en: " marukoshi.html",
       menu_page: "marukoshi_menu.html",
@@ -484,46 +634,89 @@ function init_index() {
       meals: [
         {
           "name": "Teleca corba",
+          "name_en" : "Veal stew",
           "price": 350,
-          "desc": "Tasty",
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
+          "img": "img/food/teleca_corba.jpg"
+        },{
+          "name": "Teleca corba",
+          "name_en" : "Veal stew",
+          "price": 350,
+          "desc" : "Veoma ukusno",
+          "desc_en": "Tasty",
           "img": "img/food/teleca_corba.jpg"
         },
-        {
-          "name": "Teleca corba",
-          "price": 350,
-          "desc": "Tasty",
-          "img": "img/food/teleca_corba.jpg"
-        },
-        {
-          "name": "Teleca corba",
-          "price": 350,
-          "desc": "Tasty",
-          "img": "img/food/teleca_corba.jpg"
-        },
-        {
-          "name": "Teleca corba",
-          "price": 350,
-          "desc": "Tasty",
-          "img": "img/food/teleca_corba.jpg"
-        },
-        {
-          "name": "Teleca corba",
-          "price": 350,
-          "desc": "Tasty",
-          "img": "img/food/teleca_corba.jpg"
-        },
-        {
-          "name": "Teleca corba",
-          "price": 350,
-          "desc": "Tasty",
-          "img": "img/food/teleca_corba.jpg"
-        },
-        {
-          "name": "Teleca corba",
-          "price": 350,
-          "desc": "Tasty",
-          "img": "img/food/teleca_corba.jpg"
-        }
       ]
     };
     restaurants.push(Marukoshi);
@@ -531,12 +724,35 @@ function init_index() {
 
     sort_by_avg(restaurants);
 
-    //store sorted restaurants to localstorage
-    localStorage.setItem("restaurants", JSON.stringify(restaurants));
+    //store sorted restaurants to sessionStorage
+    sessionStorage.setItem("restaurants", JSON.stringify(restaurants));
     console.log(restaurants);
   }
 
-  load_top_restaurants();
+
+  if(is_on_english_page()){
+    load_top_restaurants_en();
+  }
+  else
+    load_top_restaurants();
+  
+}
+
+function is_on_english_page(){
+
+  var split = window.location.href.split('/');
+  console.log(split);
+  //split('/');
+  var page = split[split.length - 1];
+  var regex = /.*_en\.html/
+
+  if(page.match(regex)){
+    return true;
+  }
+
+  return false;
+  //console.log(page);
+
 }
 
 /* sort restaurants by avg */
@@ -563,9 +779,10 @@ function sort_by_avg(restaurants) {
 /* load top restaurants */
 function load_top_restaurants() {
   //gets array of all restaurants
-  var restaurants = JSON.parse(localStorage.getItem("restaurants"));
+  var restaurants = JSON.parse(sessionStorage.getItem("restaurants"));
   //sort the array just in case
   sort_by_avg(restaurants);
+  console.log(restaurants);
 
   //get top 3 restaurants
   var top1_img = restaurants[0].img;
@@ -600,13 +817,54 @@ function load_top_restaurants() {
   document.getElementById("top3_desc").innerHTML = top3_desc;
 }
 
+function load_top_restaurants_en() {
+  //gets array of all restaurants
+  var restaurants = JSON.parse(sessionStorage.getItem("restaurants"));
+  //sort the array just in case
+  sort_by_avg(restaurants);
+  console.log(restaurants);
+  //get top 3 restaurants
+  var top1_img = restaurants[0].img;
+  var top1_name = restaurants[0].name;
+  var top1_desc = restaurants[0].desc_en;
+  var top1_page = restaurants[0].page_en;
+
+  var top2_img = restaurants[1].img;
+  var top2_name = restaurants[1].name;
+  var top2_desc = restaurants[1].desc_en;
+  var top2_page = restaurants[1].page_en;
+
+  var top3_img = restaurants[2].img;
+  var top3_name = restaurants[2].name;
+  var top3_desc = restaurants[2].desc_en;
+  var top3_page = restaurants[2].page_en;
+
+  console.log(top1_desc);
+
+  document.getElementById("top1_image").src = top1_img;
+  document.getElementById("top1_link").innerHTML = top1_name;
+  document.getElementById("top1_link").href = top1_page;
+  document.getElementById("top1_desc").innerHTML = top1_desc;
+
+  document.getElementById("top2_image").src = top2_img;
+  document.getElementById("top2_link").innerHTML = top2_name;
+  document.getElementById("top2_link").href = top2_page;
+  document.getElementById("top2_desc").innerHTML = top2_desc;
+
+  document.getElementById("top3_image").src = top3_img;
+  document.getElementById("top3_link").innerHTML = top3_name;
+  document.getElementById("top3_link").href = top3_page;
+  document.getElementById("top3_desc").innerHTML = top3_desc;
+}
+
 function addRating(id, rating) {
-  var restaurants = JSON.parse(localStorage.getItem("restaurants"));
+  var restaurants = JSON.parse(sessionStorage.getItem("restaurants"));
 
   restaurants[id]['sum'] += rating;
   restaurants[id]['count'] += 1;
 
-  localStorage.setItem("restaurants", JSON.stringify(restaurants));
+  sessionStorage.setItem("restaurants", JSON.stringify(restaurants));
+  window.location.reload();
 }
 
 function getStarRating(id) {
@@ -682,29 +940,43 @@ function sort_restaurants(restaurants, sortOrder) {
 }
 
 function setSortOrder(sortOrder) {
-  localStorage.setItem("restaurantsSortOrder", sortOrder);
+  sessionStorage.setItem("restaurantsSortOrder", sortOrder);
 }
 
 function load_all_restaurants(resetSortOrder) {
-  var restaurants = JSON.parse(localStorage.getItem("restaurants"));
+  var restaurants = JSON.parse(sessionStorage.getItem("restaurants"));
   var html_to_insert = "";
+  var english = is_on_english_page();
 
   restaurants = filterRestaurants(restaurants);
 
   if (resetSortOrder)
-    localStorage.setItem("restaurantsSortOrder", 1);
+    sessionStorage.setItem("restaurantsSortOrder", 1);
 
-  var sortOrder = localStorage.getItem("restaurantsSortOrder");
+  var sortOrder = sessionStorage.getItem("restaurantsSortOrder");
   restaurants = sort_restaurants(restaurants, sortOrder);
 
   for (var i = 0; i < restaurants.length; i++) {
+
+    var restaurant_page;
+    var restaurant_desc;
+
+    if(english){
+      restaurant_page = restaurants[i].page_en;
+      restaurant_desc = restaurants[i].desc_en;
+    }else{
+      restaurant_page = restaurants[i].page;
+      restaurant_desc = restaurants[i].desc;  
+    }
+
+
     html_to_insert += (
       "<div class=\"col-md-2 col-sm-6\" style = \"padding-top:20px\">" +
       "<img src=\"" + restaurants[i].img + "\" style=\"width: 100%\">" +
       "</div>" +
       "<div class=\"col-md-4 col-sm-6\" style=\"padding : 20px\">" +
-      "<h3 class=\"text-left \"><a style=\"color:black \" href=\"" + restaurants[i].page + "\">" + restaurants[i].name + "</a></h3>" +
-      "<p class=\"text-left\">" + restaurants[i].desc + "</p><br />" +
+      "<h3 class=\"text-left \"><a style=\"color:black \" href=\"" + restaurant_page + "\">" + restaurants[i].name + "</a></h3>" +
+      "<p class=\"text-left\">" + restaurant_desc + "</p><br />" +
       "</div>");
 
   }
@@ -714,25 +986,39 @@ function load_all_restaurants(resetSortOrder) {
 
 
 function load_all_restaurants_delivery(resetSortOrder) {
-  var restaurants = JSON.parse(localStorage.getItem("restaurants"));
+  var restaurants = JSON.parse(sessionStorage.getItem("restaurants"));
   var html_to_insert = "";
+  var english = is_on_english_page();
 
   restaurants = filterRestaurants(restaurants);
 
   if (resetSortOrder)
-    localStorage.setItem("restaurantsSortOrder", 1);
+    sessionStorage.setItem("restaurantsSortOrder", 1);
 
-  var sortOrder = localStorage.getItem("restaurantsSortOrder");
+  var sortOrder = sessionStorage.getItem("restaurantsSortOrder");
   restaurants = sort_restaurants(restaurants, sortOrder);
 
   for (var i = 0; i < restaurants.length; i++) {
+   
+    var restaurant_page;
+    var restaurant_desc;
+
+    if(english){
+      restaurant_page = restaurants[i].menu_page_en;
+      restaurant_desc = restaurants[i].desc_en;
+    }else{
+      restaurant_page = restaurants[i].menu_page_en;
+      restaurant_desc = restaurants[i].desc;  
+    }
+
+
     html_to_insert += (
       "<div class=\"col-md-2 col-sm-6\" style = \"padding-top:20px\">" +
       "<img src=\"" + restaurants[i].img + "\" style=\"width: 100%\">" +
       "</div>" +
       "<div class=\"col-md-4 col-sm-6\" style=\"padding : 20px\">" +
-      "<h3 class=\"text-left \"><a style=\"color:black \" href=\"" + restaurants[i].menu_page + "\">" + restaurants[i].name + "</a></h3>" +
-      "<p class=\"text-left\">" + restaurants[i].desc + "</p><br />" +
+      "<h3 class=\"text-left \"><a style=\"color:black \" href=\"" + restaurant_page + "\">" + restaurants[i].name + "</a></h3>" +
+      "<p class=\"text-left\">" + restaurant_desc + "</p><br />" +
       "</div>");
 
   }
@@ -740,9 +1026,8 @@ function load_all_restaurants_delivery(resetSortOrder) {
   document.getElementById("main_tag").innerHTML = html_to_insert;
 }
 
-
 function load_restaurants_from(mun, resetSortOrder) {
-  var restaurants = JSON.parse(localStorage.getItem("restaurants"));
+  var restaurants = JSON.parse(sessionStorage.getItem("restaurants"));
   var html_to_insert = "";
   var restaurants_from = [];
 
@@ -764,9 +1049,9 @@ function load_restaurants_from(mun, resetSortOrder) {
 
     // Sort restaurants.
     if (resetSortOrder)
-      localStorage.setItem("restaurantsSortOrder", 1);
+      sessionStorage.setItem("restaurantsSortOrder", 1);
 
-    var sortOrder = localStorage.getItem("restaurantsSortOrder");
+    var sortOrder = sessionStorage.getItem("restaurantsSortOrder");
     restaurants_from = sort_restaurants(restaurants_from, sortOrder);
 
     for (var i = 0; i < restaurants_from.length; i++) {
@@ -783,19 +1068,23 @@ function load_restaurants_from(mun, resetSortOrder) {
     document.getElementById("main_tag").innerHTML = html_to_insert;
   }
 }
-
+//english enabled
 function load_single_restaurant_menu(name) {
 
   var html_to_insert = "";
-  var restaurants = JSON.parse(localStorage.getItem("restaurants"));
+  var restaurants = JSON.parse(sessionStorage.getItem("restaurants"));
   var restaurant;
   var meal_count;
 
   //add restaurant name to the breadcrumb
-  //PAZITI NA JEZIK!!!
-  document.getElementById("bc_restaurant").innerHTML = name + " meni";
-  document.getElementById("rest_name").innerHTML = name + "<span>.</span>";
-  //get data bout the restaurant
+  if(is_on_english_page())
+    document.getElementById("bc_restaurant").innerHTML = name + " menu";
+  else
+    document.getElementById("bc_restaurant").innerHTML = name + " meni";
+  
+    document.getElementById("rest_name").innerHTML = name + "<span>.</span>";
+  
+    //get data bout the restaurant
   for (var i = 0; i < restaurants.length; i++) {
 
     if (restaurants[i].name == name) {
@@ -821,12 +1110,25 @@ function load_single_restaurant_menu(name) {
 
     //adding menu items
     for (var i = 0; i < first_col_count; i++) {
+
+      var meal_name;
+      var meal_desc;
+      if(is_on_english_page()){
+        console.log("Am on english page");
+        meal_name = restaurant.meals[i].name_en;
+        meal_desc = restaurant.meals[i].desc_en;
+      }else{
+        meal_name = restaurant.meals[i].name;  
+        meal_desc = restaurant.meals[i].desc;
+      }
+
+
       html_to_insert = html_to_insert +
         "<div class=\"menu-item\">" +
-        "<img src = \"" + restaurant.meals[i].img + "\" onclick = \"add_item('" + restaurant.meals[i].name + "'," + restaurant.meals[i].price + ",'" + restaurant.name + "')\">" +
-        "<h5 style = \"padding-top : 20px\"onclick = \"add_item('" + restaurant.meals[i].name + "'," + restaurant.meals[i].price + ",'" + restaurant.name + "')\">" +
-        restaurant.meals[i].name + "</h5> <div class=\"mi-meta\">" +
-        "<p>" + restaurant.meals[i].desc + "</p>" +
+        "<img src = \"" + restaurant.meals[i].img + "\" onclick = \"add_item('" + meal_name + "'," + restaurant.meals[i].price + ",'" + restaurant.name + "')\">" +
+        "<h5 style = \"padding-top : 20px\"onclick = \"add_item('" + meal_name + "'," + restaurant.meals[i].price + ",'" + restaurant.name + "')\">" +
+        meal_name + "</h5> <div class=\"mi-meta\">" +
+        "<p>" + meal_desc + "</p>" +
         "<div class=\"menu-price\">" + restaurant.meals[i].price + "</div> </div> </div>";
     }
 
@@ -835,12 +1137,23 @@ function load_single_restaurant_menu(name) {
 
     //adding more menu items
     for (var i = first_col_count; i < meal_count; i++) {
+      var meal_name;
+      var meal_desc;
+      if(is_on_english_page()){
+        meal_name = restaurant.meals[i].name_en;
+        meal_desc = restaurant.meals[i].desc_en;
+      }else{
+        meal_name = restaurant.meals[i].name;  
+        meal_desc = restaurant.meals[i].desc;
+      }
+
+
       html_to_insert = html_to_insert +
         "<div class=\"menu-item\">" +
-        "<img src = \"" + restaurant.meals[i].img + "\" onclick = \"add_item('" + restaurant.meals[i].name + "'," + restaurant.meals[i].price + ",'" + restaurant.name + "')\">" +
-        "<h5 style = \"padding-top : 20px\"onclick = \"add_item('" + restaurant.meals[i].name + "'," + restaurant.meals[i].price + ",'" + restaurant.name + "')\">" +
-        restaurant.meals[i].name + "</h5> <div class=\"mi-meta\">" +
-        "<p>" + restaurant.meals[i].desc + "</p>" +
+        "<img src = \"" + restaurant.meals[i].img + "\" onclick = \"add_item('" + meal_name + "'," + restaurant.meals[i].price + ",'" + restaurant.name + "')\">" +
+        "<h5 style = \"padding-top : 20px\"onclick = \"add_item('" + meal_name + "'," + restaurant.meals[i].price + ",'" + restaurant.name + "')\">" +
+        meal_name + "</h5> <div class=\"mi-meta\">" +
+        "<p>" + meal_desc + "</p>" +
         "<div class=\"menu-price\">" + restaurant.meals[i].price + "</div> </div> </div>";
     }
 
@@ -860,17 +1173,53 @@ function load_single_restaurant_menu(name) {
 }
 
 function load_single_restaurant(name) {
+
+  console.log(name);
+
+  var restaurants = JSON.parse(sessionStorage['restaurants']);
+
+  var restaurant = 5;
+  for(var i = 0; i < restaurants.length; i++){
+    console.log("Restoran");
+    console.log(restaurants[i],name);
+
+    if(restaurants[i].name == name){
+      restaurant = restaurants[i];
+      break;
+    }
+  }
+
+  console.log(restaurant);
+
+  var desc;
+
+  if(is_on_english_page()){
+    desc = restaurant.desc_en;
+  }else{
+    desc = restaurant.desc;
+  }
+
+  var rating = 0;
+
+  if(restaurant.count != 0)
+    rating = restaurant.sum/restaurant.count;
+
   document.getElementById("bc_restaurant").innerHTML = name;
   document.getElementById("title").innerHTML = name;
+  document.getElementById("about").innerHTML = desc;
+  document.getElementById("cur_rating").innerHTML = rating.toFixed();
 }
 
 //add item to local storage on index - restaurant 
 //todo finish this
 function add_item(item, price, restaurant) {
-  window.alert("Narucio " + item + " iz " + restaurant + " za " + price + " dinara");
+  if(is_on_english_page())
+    window.alert("Ordered " + item + " from " + restaurant + " for " + price + " dinars");
+  else
+    window.alert("Narucio " + item + " iz " + restaurant + " za " + price + " dinara");
 
-  var id = localStorage.getItem("current_order")
-  var orders = JSON.parse(localStorage.getItem(id));
+  var id = sessionStorage.getItem("current_order")
+  var orders = JSON.parse(sessionStorage.getItem(id));
 
   var order = {
     "item": item,
@@ -883,9 +1232,9 @@ function add_item(item, price, restaurant) {
 
   orders.push(order);
 
-  localStorage.setItem(id, JSON.stringify(orders));
+  sessionStorage.setItem(id, JSON.stringify(orders));
 
-  console.log(localStorage.getItem(id));
+  console.log(sessionStorage.getItem(id));
 }
 
 function go_to_finalize_order() {
@@ -913,13 +1262,13 @@ function next_order() {
 
   if (email_regex.test(email)) {
 
-    var prevous_orders = JSON.parse(localStorage.getItem("prevous_orders"));
+    var prevous_orders = JSON.parse(sessionStorage.getItem("prevous_orders"));
 
     if (prevous_orders == null) {
       prevous_orders = [];
     }
 
-    var curr = localStorage.getItem("current_order");
+    var curr = sessionStorage.getItem("current_order");
 
     var item = {
       "name": name,
@@ -927,13 +1276,13 @@ function next_order() {
       "addr": addr,
       "email": email,
       "phone": phone,
-      "meals": localStorage.getItem(curr)
+      "meals": sessionStorage.getItem(curr)
     }
 
     prevous_orders.push(item);
     curr = +curr + 1;
-    localStorage.setItem("current_order", curr);
-    localStorage.setItem("prevous_orders", JSON.stringify(prevous_orders));
+    sessionStorage.setItem("current_order", curr);
+    sessionStorage.setItem("prevous_orders", JSON.stringify(prevous_orders));
 
 
     //TODO - redirect na sve porudzbine kad bude gotova stranica  
@@ -946,8 +1295,8 @@ function next_order() {
 //loads page delivery.html
 function list_current_order() {
 
-  var current_order = localStorage.getItem("current_order");
-  var order = JSON.parse(localStorage.getItem(current_order));
+  var current_order = sessionStorage.getItem("current_order");
+  var order = JSON.parse(sessionStorage.getItem(current_order));
 
   var html_to_insert = "";
 
@@ -991,7 +1340,7 @@ function list_current_order() {
 //loads page my_orders.html
 function list_my_orders() {
 
-  var my_orders = JSON.parse(localStorage.getItem("prevous_orders"));
+  var my_orders = JSON.parse(sessionStorage.getItem("prevous_orders"));
 
   if (my_orders.length == 0) {
     //NOTE obrati paznju na jezik
@@ -1063,7 +1412,7 @@ function list_my_orders() {
 function exportOrdersToPdf(orders) {
   var doc = new jsPDF();
 
-  var my_orders = JSON.parse(localStorage.getItem("prevous_orders"));
+  var my_orders = JSON.parse(sessionStorage.getItem("prevous_orders"));
 
   var A4_CENTER = 105;
 
