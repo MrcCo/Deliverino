@@ -103,6 +103,17 @@
         </section>
     </div>
 
+    <div class="row-fluid">
+        <div class="d-flex flex-column justify-content-center">
+            <div class="p-1 text-center">
+                Leave a rating:
+            </div>
+            <div class="p-1 text-center" id="rating" style="text-align: center; margin: auto;">
+                
+            </div>
+        </div>
+    </div>
+
 
     <!--carousel-->
     <div class="container">
@@ -168,6 +179,9 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/circle-progress.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        document.getElementById("rating").innerHTML = getStarRating(5);
+    </script>
 
 </body>
 

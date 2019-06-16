@@ -599,7 +599,7 @@ function load_top_restaurants() {
   document.getElementById("top3_link").href = top3_page;
   document.getElementById("top3_desc").innerHTML = top3_desc;
 }
-/*
+
 function addRating(id, rating) {
   var restaurants = JSON.parse(localStorage.getItem("restaurants"));
 
@@ -618,7 +618,7 @@ function getStarRating(id) {
   <input type=\"radio\" id=\"star1_" + id + "\" name=\"rating\" value=\"1\" onclick=\"addRating(" + id + ",1)\" /><label class = \"full\" for=\"star1_" + id + "\" title=\"Sucks big time - 1 star\"></label> \
 </fieldset>";
 }
-*/
+
 
 function filterRestaurants(restaurants) {
 
