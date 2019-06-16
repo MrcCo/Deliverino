@@ -24,7 +24,7 @@
         <div class="site-logo">
           <!--TODO rename new index to index-->
           <h2>
-            <a style="color : white" href="index.html">Deliverino<span>.</span></a>
+            <a style="color : white" href="index_en.html">Deliverino<span>.</span></a>
           </h2>
         </div>
         <!-- responsive -->
@@ -33,26 +33,36 @@
         </div>
         <!-- menu -->
         <ul class="main-menu">
-          <li><a href="index.html" class="active">Pocetna</a></li>
-          <li><a href="about.html">O nama</a></li>
+          <li><a href="index_en.html" class="active">Home</a></li>
+          <li><a href="about_en.html">About Us</a></li>
           <li>
-            <a href="restaurants.html">
-              Restorani
-            </a>
+              <a class="btn dropdown-toggle active" href="#" role="button" id="language_picker" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  Restaurants
+              </a>
+      
+              <div class="dropdown-menu">
+                  <a class="dropdown-item" style="color:black; margin:0" href="restaurants_en.html">All restaurants</a>
+                  <a class="dropdown-item" style="color:black; margin:0" href="restaurants_nbg_en.html">Novi Beograd</a>
+                  <a class="dropdown-item" style="color:black; margin:0" href="restaurants_zmn_en.html">Zemun</a>
+                  <a class="dropdown-item" style="color:black; margin:0" href="restaurants_zve_en.html">Zvezdara</a>
+                  <a class="dropdown-item" style="color:black; margin:0" href="restaurants_stg_en.html">Stari Grad</a>
+                  <a class="dropdown-item" style="color:black; margin:0" href="restaurants_vrc_en.html">Vracar</a>
+              </div>
           </li>
-          <li><a href="delivery.html">Dostava</a></li>
-          <li><a href="my_orders.html">Moje narudzbine</a></li>
+          <li><a href="delivery_en.html">Delivery</a></li>
+          <li><a href="my_orders_en.html">My Orders</a></li>
           <li>
             <a class="btn dropdown-toggle" href="#" role="button"
               id="language_picker" data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">
-              Jezik
+              Language
             </a>
 
             <div class="dropdown-menu">
               <a class="dropdown-item" style="color:black; margin:0" href="#">English</a>
               <a class="dropdown-item" style="color:black; margin:0"
-                href="index.html">Srpski</a>
+                href="index.html">Serbian</a>
             </div>
           </li>
         </ul>
@@ -87,51 +97,39 @@
     </section>
     <!-- Hero section end -->
 
-    <!-- Testimonials section -->
-    <section
-      class="testimonials-section spad pb-0 set-bg"
-      data-setbg="img/review-bg.jpg">
-      <div class="container">
-        <div class="section-title text-white">
-          <i class="flaticon-020-ice-cream"></i>
-          <h2>Comments</h2>
+<!-- Testimonials section -->
+  <section class="testimonials-section spad pb-0 set-bg" data-setbg="img/review-bg.jpg">
+    <div class="container">
+      <div class="section-title text-white">
+        <i class="flaticon-020-ice-cream"></i>
+        <h2>Comments</h2>
+      </div>
+      <div class="testimonials-slider owl-carousel">
+        <div class="ts-item text-white">
+          <div class="quota">“</div>
+          <p>
+            Deliverino is faster than me!
+          </p>
+          <h6><span>Danilo Jovanovic</span>, Runner</h6>
         </div>
-        <div class="testimonials-slider owl-carousel">
-          <div class="ts-item text-white">
-            <div class="quota">“</div>
-            <p>
-              U nekoliko recenica iskenjati komentar nekog klijenta tako da
-              zvuci ubedljivo, tipa zasto koristiti nas servis i sta je tolko
-              dobro
-            </p>
-            <h6><span>Marko Stefanovic</span>, Admin</h6>
-          </div>
-          <div class="ts-item text-white">
-            <div class="quota">“</div>
-            <p>
-              Integer sed facilisis eros. In iaculis rhoncus velit in malesuada.
-              In hac habitasse platea dictumst. Fusce erat ex, consectetur sit
-              amet ornare suscipit, porta et erat. Donec nec nisi in nibh
-              commodo laoreet. Mauris dapibus justo ut feugiat malesuada. Fusce
-              ultricies ante tortor, non vestibulum est feu-giat ut.
-            </p>
-            <h6><span>Ted Chapman</span>, Client</h6>
-          </div>
-          <div class="ts-item text-white">
-            <div class="quota">“</div>
-            <p>
-              Integer sed facilisis eros. In iaculis rhoncus velit in malesuada.
-              In hac habitasse platea dictumst. Fusce erat ex, consectetur sit
-              amet ornare suscipit, porta et erat. Donec nec nisi in nibh
-              commodo laoreet. Mauris dapibus justo ut feugiat malesuada. Fusce
-              ultricies ante tortor, non vestibulum est feu-giat ut.
-            </p>
-            <h6><span>Ted Chapman</span>, Client</h6>
-          </div>
+        <div class="ts-item text-white">
+          <div class="quota">“</div>
+          <p>
+            When I am studying all day, I only trust Deliverion to fill me up!
+          </p>
+          <h6><span>Aleksandar Pavlovic</span>, Regular Guy</h6>
+        </div>
+        <div class="ts-item text-white">
+          <div class="quota">“</div>
+          <p>
+            Do-Re-Mi-Fa-So-La-Ti-DELIVERINOOOOOOOOO!
+          </p>
+          <h6><span>Nemanja Jovanovic</span>, World-Class Opera Singer</h6>
         </div>
       </div>
-    </section>
-    <!-- Testimonials section end -->
+    </div>
+  </section>
+  <!-- Testimonials section end -->
 
     <!--This div is here to leave place for some banners on the side -->
     <div class="offset-sm-3 col-sm-6">
@@ -140,7 +138,7 @@
         <div class="container">
           <div class="section-title">
             <i class="flaticon-022-tray"></i>
-            <h2>Najbolji restorani</h2>
+            <h2>Best restaurants</h2>
           </div>
           <div class="row services">
             <div class="col-sm-4 service-item">
@@ -175,9 +173,9 @@
             <br />
             Nenad Bauk and Marko Stefanovic
             <br />
-            Odsek za softversko inzenjerstvo Elektrotehnickog fakulteta
+            Faculty of Electrical Engineering, Software Engineering
             <br />
-            Univerziteta u Beogradu
+            University of Belgrade
           </p>
         </div>
       </div>
