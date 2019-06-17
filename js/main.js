@@ -1031,6 +1031,8 @@ function load_restaurants_from(mun, resetSortOrder) {
   var html_to_insert = "";
   var restaurants_from = [];
 
+  var english = is_on_english_page();
+
   for (var i = 0; i < restaurants.length; i++) {
     if (restaurants[i].mun === mun) {
       restaurants_from.push(restaurants[i]);
@@ -1055,13 +1057,25 @@ function load_restaurants_from(mun, resetSortOrder) {
     restaurants_from = sort_restaurants(restaurants_from, sortOrder);
 
     for (var i = 0; i < restaurants_from.length; i++) {
+
+      var restaurant_page;
+      var restaurant_desc;
+
+      if(english){
+        restaurant_page = restaurants_from[i].page_en;
+        restaurant_desc = restaurants_from[i].desc_en;
+      }else{
+        restaurant_page = restaurants_from[i].page_en;
+        restaurant_desc = restaurants_from[i].desc;  
+      }
+
       html_to_insert += (
         "<div class=\"col-md-2 col-sm-6\">" +
         "<img src=\"" + restaurants_from[i].img + "\" style=\"width: 100%\">" +
         "</div>" +
         "<div class=\"col-md-4 col-sm-6\" style=\"padding : 10px\">" +
-        "<h3 class=\"text-left \"><a style=\"color:black \" href=\"" + restaurants_from[i].page + "\">" + restaurants_from[i].name + "</a></h3>" +
-        "<p class=\"text-left\">" + restaurants_from[i].desc + "</p><br />" +
+        "<h3 class=\"text-left \"><a style=\"color:black \" href=\"" + restaurant_page + "\">" + restaurants_from[i].name + "</a></h3>" +
+        "<p class=\"text-left\">" + restaurant_desc + "</p><br />" +
         "</div>");
     }
 
