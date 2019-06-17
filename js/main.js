@@ -1431,6 +1431,79 @@ function list_my_orders() {
 
 }
 
+//loads page my_orders.html
+function list_my_orders_en() {
+
+  var my_orders = JSON.parse(sessionStorage.getItem("prevous_orders"));
+
+  if (my_orders.length == 0) {
+    //NOTE obrati paznju na jezik
+    window.alert("You have no orders.");
+    window.location = "index_en.html";
+  }
+
+  var html_to_insert = "";
+
+  for (var i = 0; i < my_orders.length; i++) {
+
+    var sum = 0;
+
+    html_to_insert = html_to_insert + "<div class = \"col-sm-12 col-md-6\">" +
+      "<h3 align = \"center\" > Number of Orders: " + (+i + 1) + "</h3>" +
+      " <table class=\"table table-striped\">" +
+      "<tbody>" +
+      "<tr>" +
+      "<td align=\"center\">First Name :</td>" +
+      "<td align=\"center\">" + my_orders[i].name + "</td>" +
+      "</tr>" +
+      "<tr>" +
+      "<td align=\"center\">Last Name :</td>" +
+      "<td align=\"center\">" + my_orders[i].surname + "</td>" +
+      "</tr>" +
+      "<tr>" +
+      "<td align=\"center\">Address :</td>" +
+      "<td align=\"center\">" + my_orders[i].addr + "</td>" +
+      "</tr>" +
+      "<tr>" +
+      "<td align=\"center\">Email :</td>" +
+      "<td align=\"center\">" + my_orders[i].email + "</td>" +
+      "</tr>" +
+      "<tr>" +
+      "<td align=\"center\">Telephone :</td>" +
+      "<td align=\"center\">" + my_orders[i].phone + "</td>" +
+      "</tr>";
+
+    //TODO meals
+    var meals = JSON.parse(my_orders[i].meals);
+    for (var j = 0; j < meals.length; j++) {
+      html_to_insert = html_to_insert +
+        "<tr>" +
+        "<td align=\"center\">Meal :</td>" +
+        "<td align=\"center\">" + meals[j].item + " from " + meals[j].restaurant + "</td>" +
+        "</tr>";
+
+      sum = +sum + meals[j].price;
+      console.log(meals[j]);
+    }
+
+    //add total price
+    html_to_insert = html_to_insert +
+      "<tr>" +
+      "<td align=\"center\">Total Price:</td>" +
+      "<td align=\"center\">" + sum + "</td>" +
+      "</tr>";
+
+
+    //close table
+    html_to_insert = html_to_insert +
+      "</tbody> </table></div>";
+
+  }
+
+  document.getElementById("orders").innerHTML = html_to_insert;
+
+}
+
 function exportOrdersToPdf(orders) {
   var doc = new jsPDF();
 
