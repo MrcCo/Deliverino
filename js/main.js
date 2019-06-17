@@ -1504,16 +1504,39 @@ function list_my_orders_en() {
 
 }
 
-function exportOrdersToPdf(orders) {
+function exportOrdersToPdf(lang) {
   var doc = new jsPDF();
 
   var my_orders = JSON.parse(sessionStorage.getItem("prevous_orders"));
 
   var A4_CENTER = 105;
 
+
+  var PDF_STRING = {
+    "serbian": {
+      my_orders: "Moje Narudzbine",
+      order:  "Narudzbina",
+      contact: "Kontakt",
+      meal: "Jelo",
+      total_price: "Ukupna Cena",
+      file : "MojeNarudzbine"
+    },
+    "english": {
+      my_orders: "My Orders",
+      order:  "Order",
+      contact: "Contact",
+      meal: "Meal",
+      total_price: "Total Price",
+      file : "MyOrders"
+    }
+  };
+
+  var lang_strings = PDF_STRING[lang];
+
+
   // Header
   var aboveHeader = 10;
-  doc.text("My Orders", A4_CENTER, aboveHeader, {align: "center"});
+  doc.text(lang_strings.my_orders, A4_CENTER, aboveHeader, {align: "center"});
 
   // Body
   var marginBetweeenOrders = 10;
@@ -1524,10 +1547,10 @@ function exportOrdersToPdf(orders) {
   var current_y = aboveHeader + marginAfterText + marginBetweeenOrders;
   for (var i = 0; i < my_orders.length; i++) {
 
-    var orderName = "Order #" + (i + 1);
+    var orderName = lang_strings.order + " #" + (i + 1);
     doc.text(orderName, 10, current_y);
 
-    var osobaText = "Contact: " + my_orders[i].name + " " + my_orders[i].surname + ", " + my_orders[i].addr;
+    var osobaText = lang_strings.contact + ": " + my_orders[i].name + " " + my_orders[i].surname + ", " + my_orders[i].addr;
     doc.text(osobaText, 10, current_y + marginAfterText);
 
     var meals = JSON.parse(my_orders[i].meals);
@@ -1535,13 +1558,13 @@ function exportOrdersToPdf(orders) {
     var totalPrice = 0;
     for (var j = 0; j < meals.length; j++) {
       
-      var mealText = "Meal #" + (j + 1) + ": " + meals[j].item;
+      var mealText = lang_strings.meal + " #" + (j + 1) + ": " + meals[j].item;
       doc.text(mealText, 10, current_y + (2 + j) * marginAfterText)
 
       totalPrice += meals[j].price;
     }
 
-    var totalPriceText = "Total Price: " + totalPrice;
+    var totalPriceText = lang_strings.total_price + ": " + totalPrice;
     doc.text(totalPriceText, 10, current_y + (2 + meals.length) * marginAfterText);
 
     current_y += (3 + meals.length) * marginAfterText + marginBetweeenOrders;
@@ -1549,5 +1572,5 @@ function exportOrdersToPdf(orders) {
 
 
 
-  doc.save('MyOrders.pdf');
+  doc.save(lang_strings.file + '.pdf');
 }
