@@ -412,9 +412,9 @@ function init_index() {
       desc: "Lep restoran", //opis restorana
       desc_en : "Lovely restaurant",
       page: " biber.html",
-      page_en: " biber.html",
+      page_en: " biber_en.html",
       menu_page: "biber_menu.html",
-      menu_page_en: "biber_menu.html",
+      menu_page_en: "biber_menu_en.html",
       meal_types: "Domaca kuhinja",
       meals: [
         {
@@ -1162,8 +1162,16 @@ function load_single_restaurant_menu(name) {
       "</div> </div> </div> </div> ";
 
     html_to_insert = html_to_insert +
-    "<div class = \"offset-sm-6 col-sm-1\">" +
-      "<button class=\"btn btn-warning\" onclick = \"go_to_current_order()\"> Naruci </button>" +
+    "<div class = \"offset-sm-5 col-sm-1\">" +
+      "<button class=\"btn btn-warning\" onclick = \"go_to_current_order()\">";
+      
+    if(is_on_english_page()){
+      html_to_insert+="Submit order";
+    }else{
+      html_to_insert+="Naruci";
+    }
+      
+    html_to_insert += "</button>" +
     "</div>";
 
     document.getElementById("menu").innerHTML = html_to_insert;
