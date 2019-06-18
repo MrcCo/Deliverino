@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Poncho - Deliverino</title>
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Deliverino</title>
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="shortcut icon" />
@@ -23,12 +23,11 @@
 
 <body onload="load_single_restaurant('Poncho')">
     <!-- Header section -->
-    <header class="header-section" style="background-color: black">
+    <header style="background-color: black">
         <div class="header-warp">
             <div class="site-logo">
-                <!--TODO rename new index to index-->
                 <h2>
-                    <a style="color : white" href="index.html">Deliverino<span>.</span></a>
+                    <a style="color : white" href="index_en.html">Deliverino<span>.</span></a>
                 </h2>
             </div>
             <!-- responsive -->
@@ -37,55 +36,52 @@
             </div>
             <!-- menu -->
             <ul class="main-menu">
-                <li><a href="index.html">Pocetna</a></li>
-                <li><a href="about.html">O nama</a></li>
+                <li><a href="index_en.html" class="">Home</a></li>
+                <li><a href="about_en.html">About Us</a></li>
                 <li>
                     <a class="btn dropdown-toggle active" href="#" role="button" id="language_picker"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Restorani
+                        Restaurants
                     </a>
 
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" style="color:black; margin:0" href="restaurants.html">Svi restorani</a>
-                        <a class="dropdown-item" style="color:black; margin:0" href="restaurants_nbg.html">Novi
+                        <a class="dropdown-item" style="color:black; margin:0" href="restaurants_en.html">All
+                            restaurants</a>
+                        <a class="dropdown-item" style="color:black; margin:0" href="restaurants_nbg_en.html">Novi
                             Beograd</a>
-                        <a class="dropdown-item" style="color:black; margin:0" href="restaurants_zmn.html">Zemun</a>
-                        <a class="dropdown-item" style="color:black; margin:0" href="restaurants_zve.html">Zvezdara</a>
-                        <a class="dropdown-item" style="color:black; margin:0" href="restaurants_stg.html">Stari
+                        <a class="dropdown-item" style="color:black; margin:0" href="restaurants_zmn_en.html">Zemun</a>
+                        <a class="dropdown-item" style="color:black; margin:0"
+                            href="restaurants_zve_en.html">Zvezdara</a>
+                        <a class="dropdown-item" style="color:black; margin:0" href="restaurants_stg_en.html">Stari
                             Grad</a>
-                        <a class="dropdown-item" style="color:black; margin:0" href="restaurants_vrc.html">Vracar</a>
+                        <a class="dropdown-item" style="color:black; margin:0" href="restaurants_vrc_en.html">Vracar</a>
                     </div>
                 </li>
-                <li><a href="delivery.html">Dostava</a></li>
-                <li><a href="my_orders.html">Moje narudzbine</a></li>
+                <li><a href="delivery_en.html" class="">Delivery</a></li>
+                <li><a href="my_orders_en.html">My Orders</a></li>
                 <li>
                     <a class="btn dropdown-toggle" href="#" role="button" id="language_picker" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
-                        Jezik
+                        Language
                     </a>
 
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" style="color:black; margin:0" href="poncho_en.html">English</a>
-                        <a class="dropdown-item" style="color:black; margin:0" href="#">Srpski</a>
+                        <a class="dropdown-item" style="color:black; margin:0" href="#">English</a>
+                        <a class="dropdown-item" style="color:black; margin:0" href="poncho.html">Serbian</a>
                     </div>
                 </li>
             </ul>
         </div>
     </header>
     <!-- Header section end -->
-
-
-    <!--dummy row DO NOT REMOVE-->
-    <div class="row" style="height: 100px"></div>
-    <!--dummy row over-->
-
+    
     <!-- Bread crumbs -->
     <div class="row-fluid">
         <div class="offset-sm-2 col-sm-6" style="padding-top: 20px">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb bg-white">
-                    <li class="breadcrumb-item"><a style="color:black" href="index.html">Pocetna</a></li>
-                    <li class="breadcrumb-item"><a style="color:black" href="restaurants.html">Restorani</a></li>
+                    <li class="breadcrumb-item"><a style="color:black" href="index_en.html">Home</a></li>
+                    <li class="breadcrumb-item"><a style="color:black" href="restaurants_en.html">Restaurants</a></li>
                     <li class="breadcrumb-item" style="color:#ffc515" aria-current="page" id="bc_restaurant"></li>
                 </ol>
             </nav>
@@ -101,16 +97,16 @@
                     <h2 id="title"></h2>
                 </div>
             </div>
-            <h5 align="center"> O nama </h5>
+            <h5 align="center"> About us </h5>
             <p align="center" id="about"> </p>
-            <p align="center"> Nasa trenutna ocena je : <span id="cur_rating"></span> </p>
+            <p align="center"> Our current rating is : <span id="cur_rating"></span> </p>
 
         </section>
 
         <div class="row-fluid">
             <div class="d-flex flex-column justify-content-center">
                 <div class="p-1 text-center">
-                    Ocenite nas restoran:
+                    Rate our restaurant:
                 </div>
                 <div class="p-1 text-center" id="rating" style="text-align: center; margin: auto;">
 
@@ -118,6 +114,7 @@
             </div>
         </div>
     </div>
+
     <!--carousel-->
     <div class="container">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -192,7 +189,6 @@
         }
         document.getElementById("rating").innerHTML = getStarRating(id);
     </script>
-
 
 </body>
 
