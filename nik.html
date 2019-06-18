@@ -105,24 +105,28 @@
           <h2 id="title"></h2>
         </div>
       </div>
-    </section>
-  </div>
+      <h5 align="center"> O nama </h5>
+      <p align="center" id="about"> </p>
+      <p align="center"> Nasa trenutna ocena je : <span id="cur_rating"></span> </p>
 
-  <div class="row-fluid">
+    </section>
+
+    <div class="row-fluid">
       <div class="d-flex flex-column justify-content-center">
-          <div class="p-1 text-center">
-              Leave a rating:
-          </div>
-          <div class="p-1 text-center" id="rating" style="text-align: center; margin: auto;">
-              
-          </div>
+        <div class="p-1 text-center">
+          Ocenite nas restoran:
+        </div>
+        <div class="p-1 text-center" id="rating" style="text-align: center; margin: auto;">
+
+        </div>
       </div>
-      </div>
+    </div>
+  </div>
 
   <!--carousel-->
   <div class="container">
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner" >
+      <div class="carousel-inner">
         <div class="carousel-item active">
           <img class="d-block w-100" src="img/Chez/chez2.jpg" alt="First slide">
         </div>
@@ -147,7 +151,7 @@
 
 
   <!--Google map-->
-  <div class="row">
+  <div class="row" style="margin:20px">
     <div id="map-container-google-2" class="z-depth-1-half map-container" style="height: 450PX; width : 100%;">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.367034908731!2d20.424434951345056!3d44.814086784503594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a655e3ac1af61%3A0x69a7e1e805f2d9bf!2sChez+Nik!5e0!3m2!1ssr!2srs!4v1558349502845!5m2!1ssr!2srs"
@@ -185,7 +189,17 @@
   <script src="js/circle-progress.min.js"></script>
   <script src="js/main.js"></script>
   <script>
-      document.getElementById("rating").innerHTML = getStarRating(1);
+    var id;
+    var restaurants = JSON.parse(sessionStorage['restaurants']);
+    for (var i = 0; i < restaurants.length; i++) {
+
+      if (restaurants[i].name == "Chez Nik") {
+        id = i;
+        break;
+      }
+
+    }
+    document.getElementById("rating").innerHTML = getStarRating(id);
   </script>
 
 </body>
