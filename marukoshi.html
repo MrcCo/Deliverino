@@ -64,7 +64,7 @@
                     </a>
 
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" style="color:black; margin:0" href="index_en.html">English</a>
+                        <a class="dropdown-item" style="color:black; margin:0" href="marukoshi_en.html">English</a>
                         <a class="dropdown-item" style="color:black; margin:0" href="#">Srpski</a>
                     </div>
                 </li>
@@ -97,28 +97,33 @@
             <div class="container">
                 <div class="section-title">
                     <i class="flaticon-022-tray"></i>
-                    <h2 id = "title"></h2>
+                    <h2 id="title"></h2>
                 </div>
             </div>
-        </section>
-    </div>
+            <h5 align="center"> O nama </h5>
+            <p align="center" id="about"> </p>
+            <p align="center"> Nasa trenutna ocena je : <span id="cur_rating"></span> </p>
 
-    <div class="row-fluid">
-        <div class="d-flex flex-column justify-content-center">
-            <div class="p-1 text-center">
-                Leave a rating:
-            </div>
-            <div class="p-1 text-center" id="rating" style="text-align: center; margin: auto;">
-                
+        </section>
+
+        <div class="row-fluid">
+            <div class="d-flex flex-column justify-content-center">
+                <div class="p-1 text-center">
+                    Ocenite nas restoran:
+                </div>
+                <div class="p-1 text-center" id="rating" style="text-align: center; margin: auto;">
+
+                </div>
             </div>
         </div>
     </div>
 
 
+
     <!--carousel-->
     <div class="container">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner" >
+            <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img class="d-block w-100" src="img/Marukoshi/marukoshi1.jpg" alt="First slide">
                 </div>
@@ -142,7 +147,7 @@
     <!--carousel over-->
 
     <!--Google map-->
-    <div class="row">
+    <div class="row" style = "margin:20px">
         <div id="map-container-google-2" class="z-depth-1-half map-container" style="height: 450PX; width : 100%;">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11319.690486336825!2d20.46313!3d44.823141!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5ef2f500bf106f6e!2sJapanski+restoran+Marukoshi+-+Beograd!5e0!3m2!1ssr!2srs!4v1558649143720!5m2!1ssr!2srs"
@@ -180,7 +185,17 @@
     <script src="js/circle-progress.min.js"></script>
     <script src="js/main.js"></script>
     <script>
-        document.getElementById("rating").innerHTML = getStarRating(5);
+        var id;
+        var restaurants = JSON.parse(sessionStorage['restaurants']);
+        for(var i = 0; i < restaurants.length; i++){
+
+            if(restaurants[i].name == "Marukoshi"){
+                id = i;
+                break;
+            }
+
+        }
+        document.getElementById("rating").innerHTML = getStarRating(id);
     </script>
 
 </body>

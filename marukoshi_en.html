@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>So i biber - Deliverino</title>
+    <title>Atos - Deliverino</title>
 
-    
+
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="shortcut icon" />
 
@@ -21,14 +21,13 @@
 
 </head>
 
-<body onload="load_single_restaurant('So i biber')">
+<body onload="load_single_restaurant('Marukoshi')">
     <!-- Header section -->
-    <header class="header-section" style="background-color: black">
+    <header style="background-color: black">
         <div class="header-warp">
             <div class="site-logo">
-                <!--TODO rename new index to index-->
                 <h2>
-                    <a style="color : white" href="index.html">Deliverino<span>.</span></a>
+                    <a style="color : white" href="index_en.html">Deliverino<span>.</span></a>
                 </h2>
             </div>
             <!-- responsive -->
@@ -37,36 +36,38 @@
             </div>
             <!-- menu -->
             <ul class="main-menu">
-                <li><a href="index.html">Pocetna</a></li>
-                <li><a href="about.html">O nama</a></li>
-                <li>
-                    <a class="btn dropdown-toggle active" href="#" role="button" id="language_picker"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Restorani
-                    </a>
-
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" style="color:black; margin:0" href="restaurants.html">Svi restorani</a>
-                        <a class="dropdown-item" style="color:black; margin:0" href="restaurants_nbg.html">Novi
-                            Beograd</a>
-                        <a class="dropdown-item" style="color:black; margin:0" href="restaurants_zmn.html">Zemun</a>
-                        <a class="dropdown-item" style="color:black; margin:0" href="restaurants_zve.html">Zvezdara</a>
-                        <a class="dropdown-item" style="color:black; margin:0" href="restaurants_stg.html">Stari
-                            Grad</a>
-                        <a class="dropdown-item" style="color:black; margin:0" href="restaurants_vrc.html">Vracar</a>
-                    </div>
-                </li>
-                <li><a href="delivery.html">Dostava</a></li>
-                <li><a href="my_orders.html">Moje narudzbine</a></li>
+                <li><a href="index_en.html" class="">Home</a></li>
+                <li><a href="about_en.html">About Us</a></li>
                 <li>
                     <a class="btn dropdown-toggle" href="#" role="button" id="language_picker" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
-                        Jezik
+                        Restaurants
                     </a>
 
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" style="color:black; margin:0" href="index_en.html">English</a>
-                        <a class="dropdown-item" style="color:black; margin:0" href="#">Srpski</a>
+                        <a class="dropdown-item" style="color:black; margin:0" href="restaurants_en.html">All
+                            restaurants</a>
+                        <a class="dropdown-item" style="color:black; margin:0" href="restaurants_nbg_en.html">Novi
+                            Beograd</a>
+                        <a class="dropdown-item" style="color:black; margin:0" href="restaurants_zmn_en.html">Zemun</a>
+                        <a class="dropdown-item" style="color:black; margin:0"
+                            href="restaurants_zve_en.html">Zvezdara</a>
+                        <a class="dropdown-item" style="color:black; margin:0" href="restaurants_stg_en.html">Stari
+                            Grad</a>
+                        <a class="dropdown-item" style="color:black; margin:0" href="restaurants_vrc_en.html">Vracar</a>
+                    </div>
+                </li>
+                <li><a href="delivery_en.html" class="active">Delivery</a></li>
+                <li><a href="my_orders_en.html">My Orders</a></li>
+                <li>
+                    <a class="btn dropdown-toggle" href="#" role="button" id="language_picker" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Language
+                    </a>
+
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" style="color:black; margin:0" href="#">English</a>
+                        <a class="dropdown-item" style="color:black; margin:0" href="marukoshi.html">Serbian</a>
                     </div>
                 </li>
             </ul>
@@ -84,8 +85,8 @@
         <div class="offset-sm-2 col-sm-6" style="padding-top: 20px">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb bg-white">
-                    <li class="breadcrumb-item"><a style="color:black" href="index.html">Pocetna</a></li>
-                    <li class="breadcrumb-item"><a style="color:black" href="restaurants.html">Restorani</a></li>
+                    <li class="breadcrumb-item"><a style="color:black" href="index_en.html">Home</a></li>
+                    <li class="breadcrumb-item"><a style="color:black" href="restaurants_en.html">Restaurants</a></li>
                     <li class="breadcrumb-item" style="color:#ffc515" aria-current="page" id="bc_restaurant"></li>
                 </ol>
             </nav>
@@ -98,33 +99,39 @@
             <div class="container">
                 <div class="section-title">
                     <i class="flaticon-022-tray"></i>
-                    <h2 id = "title"></h2>
+                    <h2 id="title"></h2>
                 </div>
             </div>
-        </section>
-    </div>
+            <h5 align="center"> About us </h5>
+            <p align="center" id="about"> </p>
+            <p align="center"> Our current rating is : <span id="cur_rating"></span> </p>
 
-    <div class="row-fluid">
-        <div class="d-flex flex-column justify-content-center">
-            <div class="p-1 text-center">
-                Leave a rating:
-            </div>
-            <div class="p-1 text-center" id="rating" style="text-align: center; margin: auto;">
-                
+        </section>
+
+        <div class="row-fluid">
+            <div class="d-flex flex-column justify-content-center">
+                <div class="p-1 text-center">
+                    Rate our restaurant:
+                </div>
+                <div class="p-1 text-center" id="rating" style="text-align: center; margin: auto;">
+
+                </div>
             </div>
         </div>
     </div>
 
-
     <!--carousel-->
     <div class="container">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner" >
+            <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" src="img/So/so1.png" alt="First slide">
+                    <img class="d-block w-100" src="img/Marukoshi/marukoshi1.jpg" alt="First slide">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="img/So/so2.jpg" alt="Second slide">
+                    <img class="d-block w-100" src="img/Marukoshi/marukoshi2.jpg" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="img/Marukoshi/marukoshi3.jpg" alt="Third slide">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -140,7 +147,7 @@
     <!--carousel over-->
 
     <!--Google map-->
-    <div class="row">
+    <div class="row" style="margin:20px">
         <div id="map-container-google-2" class="z-depth-1-half map-container" style="height: 450PX; width : 100%;">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.460122778061!2d20.415891551345098!3d44.812190084628774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a6f8a05ed2373%3A0xcebd6740ea229208!2z0JDRgtC-0YE!5e0!3m2!1ssr!2srs!4v1558349475248!5m2!1ssr!2srs"
@@ -180,9 +187,9 @@
     <script>
         var id;
         var restaurants = JSON.parse(sessionStorage['restaurants']);
-        for(var i = 0; i < restaurants.length; i++){
+        for (var i = 0; i < restaurants.length; i++) {
 
-            if(restaurants[i].name == "So i biber"){
+            if (restaurants[i].name == "Marukoshi") {
                 id = i;
                 break;
             }

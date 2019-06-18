@@ -196,9 +196,18 @@
   <script src="js/circle-progress.min.js"></script>
   <script src="js/main.js"></script>
   <script>
-    document.getElementById("rating").innerHTML = getStarRating(2);
-  </script>
+    var id;
+    var restaurants = JSON.parse(sessionStorage['restaurants']);
+    for (var i = 0; i < restaurants.length; i++) {
 
+      if (restaurants[i].name == "Frans") {
+        id = i;
+        break;
+      }
+
+    }
+    document.getElementById("rating").innerHTML = getStarRating(id);
+  </script>
 </body>
 
 </html>
