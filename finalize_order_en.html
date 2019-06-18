@@ -22,12 +22,11 @@
 <body>
 
     <!-- Header section -->
-    <header class="header-section" style="background-color: black">
+    <header style="background-color: black">
         <div class="header-warp">
             <div class="site-logo">
-                <!--TODO rename new index to index-->
                 <h2>
-                    <a style="color : white" href="index.html">Deliverino<span>.</span></a>
+                    <a style="color : white" href="index_en.html">Deliverino<span>.</span></a>
                 </h2>
             </div>
             <!-- responsive -->
@@ -36,41 +35,43 @@
             </div>
             <!-- menu -->
             <ul class="main-menu">
-                <li><a href="index.html">Pocetna</a></li>
-                <li><a href="about.html">O nama</a></li>
+                <li><a href="index_en.html" class="">Home</a></li>
+                <li><a href="about_en.html">About Us</a></li>
                 <li>
                     <a class="btn dropdown-toggle" href="#" role="button" id="language_picker" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
-                        Restorani
+                        Restaurants
                     </a>
-
+    
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" style="color:black; margin:0" href="restaurants.html">Svi restorani</a>
-                        <a class="dropdown-item" style="color:black; margin:0" href="restaurants_nbg.html">Novi
+                        <a class="dropdown-item" style="color:black; margin:0" href="restaurants_en.html">All
+                            restaurants</a>
+                        <a class="dropdown-item" style="color:black; margin:0" href="restaurants_nbg_en.html">Novi
                             Beograd</a>
-                        <a class="dropdown-item" style="color:black; margin:0" href="restaurants_zmn.html">Zemun</a>
-                        <a class="dropdown-item" style="color:black; margin:0" href="restaurants_zve.html">Zvezdara</a>
-                        <a class="dropdown-item" style="color:black; margin:0" href="restaurants_stg.html">Stari
+                        <a class="dropdown-item" style="color:black; margin:0" href="restaurants_zmn_en.html">Zemun</a>
+                        <a class="dropdown-item" style="color:black; margin:0"
+                            href="restaurants_zve_en.html">Zvezdara</a>
+                        <a class="dropdown-item" style="color:black; margin:0" href="restaurants_stg_en.html">Stari
                             Grad</a>
-                        <a class="dropdown-item" style="color:black; margin:0" href="restaurants_vrc.html">Vracar</a>
+                        <a class="dropdown-item" style="color:black; margin:0" href="restaurants_vrc_en.html">Vracar</a>
                     </div>
                 </li>
-                <li><a href="delivery.html" class="active">Dostava</a></li>
-                <li><a href="my_orders.html">Moje narudzbine</a></li>
+                <li><a href="delivery_en.html" class="active">Delivery</a></li>
+                <li><a href="my_orders_en.html">My Orders</a></li>
                 <li>
                     <a class="btn dropdown-toggle" href="#" role="button" id="language_picker" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
-                        Jezik
+                        Language
                     </a>
-
+    
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" style="color:black; margin:0" href="finalize_order_en.html">English</a>
-                        <a class="dropdown-item" style="color:black; margin:0" href="#">Srpski</a>
+                        <a class="dropdown-item" style="color:black; margin:0" href="#">English</a>
+                        <a class="dropdown-item" style="color:black; margin:0" href="finalize_order.html">Serbian</a>
                     </div>
                 </li>
             </ul>
         </div>
-    </header>
+        </header>
     <!-- Header section end -->
 
     <!--dummy row DO NOT REMOVE-->
@@ -82,8 +83,8 @@
         <div class="offset-sm-2 col-sm-6" style="padding-top: 20px">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb bg-white">
-                    <li class="breadcrumb-item"><a style="color:black" href="index.html">Pocetna</a></li>
-                    <li class="breadcrumb-item" style="color:#ffc515" aria-current="page">Unos podataka</li>
+                    <li class="breadcrumb-item"><a style="color:black" href="index_en.html">Home</a></li>
+                    <li class="breadcrumb-item" style="color:#ffc515" aria-current="page">Finalize Order</li>
                 </ol>
             </nav>
         </div>
@@ -96,7 +97,7 @@
             <div class="container">
                 <div class="section-title">
                     <i class="flaticon-022-tray"></i>
-                    <h2>Unesite podatke za narudzbinu</h2>
+                    <h2>Enter information to order</h2>
                 </div>
             </div>
         </section>
@@ -107,16 +108,16 @@
                     <table class="table table-striped">
                         <tbody>
                             <tr>
-                                <td align="center">Ime :</td>
+                                <td align="center">First Name :</td>
                                 <td align="center"><input size=25 type="text" name="name"></td>
                             </tr>
 
                             <tr>
-                                <td align="center">Prezime :</td>
+                                <td align="center">Last Name :</td>
                                 <td align="center"><input size=25 type="text" name="surname"></td>
                             </tr>
                             <tr>
-                                <td align="center"> Adresa :</td>
+                                <td align="center"> Address :</td>
                                 <td align="center"><input size=25 type="text" name="addr"></td>
                             </tr>
 
@@ -126,14 +127,13 @@
                             </tr>
 
                             <tr>
-                                <td align="center">Telefon :</td>
+                                <td align="center">Telephone :</td>
                                 <td align="center"><input size=25 type="text" name="phone"></td>
                             </tr>
 
                             <tr>
                                 <td colspan="2" align="center">
-                                    <button type="button" class="btn btn-warning" onclick="next_order()">Potvrdi
-                                        narudzbinu</button>
+                                    <button type="button" class="btn btn-warning" onclick="next_order()">Confirm Order</button>
                                 </td>
                             </tr>
                         </tbody>

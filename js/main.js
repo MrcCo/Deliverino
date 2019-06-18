@@ -1007,7 +1007,7 @@ function load_all_restaurants_delivery(resetSortOrder) {
       restaurant_page = restaurants[i].menu_page_en;
       restaurant_desc = restaurants[i].desc_en;
     }else{
-      restaurant_page = restaurants[i].menu_page_en;
+      restaurant_page = restaurants[i].menu_page;
       restaurant_desc = restaurants[i].desc;  
     }
 
@@ -1115,8 +1115,14 @@ function load_single_restaurant_menu(name) {
     var first_col_count = Math.ceil(meal_count / 2);
 
 
+    var menuText = "Meni";
+
+    if (is_on_english_page()) {
+      menuText = "Our Menu";
+    }
+
     //insert container
-    html_to_insert = html_to_insert + "<div class=\"container\"> <div class=\"section-title text-white\">	<i class=\"flaticon-003-chicken-2\"></i>	<h2>Our Menu</h2> </div>";
+    html_to_insert = html_to_insert + "<div class=\"container\"> <div class=\"section-title text-white\">	<i class=\"flaticon-003-chicken-2\"></i>	<h2>"+ menuText +"</h2> </div>";
 
     //menu tab nav
     html_to_insert = html_to_insert +
@@ -1260,11 +1266,22 @@ function add_item(item, price, restaurant) {
 }
 
 function go_to_finalize_order() {
-  window.location = "finalize_order.html";
+
+  if (is_on_english_page()) {
+    window.location = "finalize_order_en.html";
+  }
+  else {
+    window.location = "finalize_order.html";
+  }
 }
 
 function go_to_current_order(){
-  window.location = "current_order.html";
+  if (is_on_english_page()) {
+    window.location = "current_order_en.html";
+  }
+  else{
+    window.location = "current_order.html";
+  }
 }
 
 //called from finalize_order
@@ -1307,8 +1324,14 @@ function next_order() {
     sessionStorage.setItem("prevous_orders", JSON.stringify(prevous_orders));
 
 
-    //TODO - redirect na sve porudzbine kad bude gotova stranica  
-    window.location = "my_orders.html";
+    //TODO - redirect na sve porudzbine kad bude gotova stranica 
+    
+    if (is_on_english_page()) {
+      window.location = "my_orders_en.html";
+    }
+    else {
+      window.location = "my_orders.html";
+    }
   } else {
     window.alert("Uneli ste nevalidne podatke");
   }
@@ -1324,11 +1347,18 @@ function list_current_order() {
 
   if (order != null && order.length > 0) {
 
+
+    var headerString = "Vasa Narudzbina";
+
+    if (is_on_english_page()) {
+      headerString = "Your Order";
+    }
+
     //before orders
     html_to_insert = html_to_insert + "<div class=\"container\"> " +
       "<div class=\"section-title\">" +
       "<i class=\"flaticon-007-spaguetti\"></i>" +
-      "<h2>Vasa narudzbina</h2>" +
+      "<h2>"+ headerString +"</h2>" +
       "</div>" +
       "<div class=\"tab-content menu-tab-content\">" +
       "<div class=\"tab-pane fade show active\" id=\"tab-1\" role=\"tabpanel\" aria-labelledby=\"tab-1\">" +

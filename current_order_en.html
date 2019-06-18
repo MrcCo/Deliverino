@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Deliverino</title>
+
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="shortcut icon" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/flaticon.css" />
+  <link rel="stylesheet" href="css/owl.carousel.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animate.css" />
+</head>
+
+<body onload="list_current_order()">
+
+  <!-- Header section -->
+  <header style="background-color: black">
+    <div class="header-warp">
+        <div class="site-logo">
+            <h2>
+                <a style="color : white" href="index_en.html">Deliverino<span>.</span></a>
+            </h2>
+        </div>
+        <!-- responsive -->
+        <div class="nav-switch">
+            <i class="fa fa-bars"></i>
+        </div>
+        <!-- menu -->
+        <ul class="main-menu">
+            <li><a href="index_en.html" class="">Home</a></li>
+            <li><a href="about_en.html">About Us</a></li>
+            <li>
+                <a class="btn dropdown-toggle" href="#" role="button" id="language_picker" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Restaurants
+                </a>
+
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" style="color:black; margin:0" href="restaurants_en.html">All
+                        restaurants</a>
+                    <a class="dropdown-item" style="color:black; margin:0" href="restaurants_nbg_en.html">Novi
+                        Beograd</a>
+                    <a class="dropdown-item" style="color:black; margin:0" href="restaurants_zmn_en.html">Zemun</a>
+                    <a class="dropdown-item" style="color:black; margin:0"
+                        href="restaurants_zve_en.html">Zvezdara</a>
+                    <a class="dropdown-item" style="color:black; margin:0" href="restaurants_stg_en.html">Stari
+                        Grad</a>
+                    <a class="dropdown-item" style="color:black; margin:0" href="restaurants_vrc_en.html">Vracar</a>
+                </div>
+            </li>
+            <li><a href="delivery_en.html" class="active">Delivery</a></li>
+            <li><a href="my_orders_en.html">My Orders</a></li>
+            <li>
+                <a class="btn dropdown-toggle" href="#" role="button" id="language_picker" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Language
+                </a>
+
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" style="color:black; margin:0" href="#">English</a>
+                    <a class="dropdown-item" style="color:black; margin:0" href="current_order.html">Serbian</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    </header>
+  <!-- Header section end -->
+
+  <!--dummy row DO NOT REMOVE-->
+  <div class="row" style="height: 100px"></div>
+  <!--dummy row over-->
+
+
+  <!-- Bread crumbs -->
+  <div class="row-fluid">
+    <div class="offset-sm-2 col-sm-6" style="padding-top: 20px">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-white">
+          <li class="breadcrumb-item"><a style="color:black" href="index_en.html">Home</a></li>
+          <li class="breadcrumb-item" style="color:#ffc515" aria-current="page">Delivery</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <!-- Bread crumbs over -->
+
+  <div class="container">
+    <div class="row">
+      <div id="delivery_body" class="offset-sm-3 col-sm-6">
+
+
+
+      </div>
+    </div>
+    <div class="row" style="padding-bottom:20px">
+      <div class="offset-sm-5 col-sm-6">
+        <button type="button" class="btn btn-warning" onclick="go_to_finalize_order()">Confirm Order</button>
+      </div>
+    </div>
+  </div>
+
+  <!--body over-->
+
+
+  <!-- Footer section -->
+  <footer class="footer-section">
+    <div class="footer-bg-area set-bg" data-setbg="img/footer-bg.jpg">
+      <div class="copyright">
+        <p>
+          Copyright
+          <br />
+          2019
+          <br />
+          Nenad Bauk and Marko Stefanovic
+          <br />
+          Odsek za softversko inzenjerstvo Elektrotehnickog fakulteta
+          <br />
+          Univerziteta u Beogradu
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer section end -->
+
+  <!--====== Javascripts & Jquery ======-->
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/circle-progress.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
