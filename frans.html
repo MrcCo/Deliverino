@@ -100,6 +100,7 @@
   </div>
   <!-- Bread crumbs over -->
 
+
   <div class="container">
     <section class="inter-section spad" style="padding-bottom:0; padding-top: 30px">
       <div class="container">
@@ -108,19 +109,24 @@
           <h2 id="title"></h2>
         </div>
       </div>
-    </section>
-  </div>
+      <h5 align="center"> O nama </h5>
+      <p align="center" id="about"> </p>
+      <p align="center"> Nasa trenutna ocena je : <span id="cur_rating"></span> </p>
 
-  <div class="row-fluid">
-    <div class="d-flex flex-column justify-content-center">
+    </section>
+
+    <div class="row-fluid">
+      <div class="d-flex flex-column justify-content-center">
         <div class="p-1 text-center">
-            Leave a rating:
+          Ocenite nas restoran:
         </div>
         <div class="p-1 text-center" id="rating" style="text-align: center; margin: auto;">
-            
+
         </div>
+      </div>
     </div>
   </div>
+
 
 
   <!--carousel-->
@@ -190,7 +196,7 @@
   <script src="js/circle-progress.min.js"></script>
   <script src="js/main.js"></script>
   <script>
-      document.getElementById("rating").innerHTML = getStarRating(2);
+    document.getElementById("rating").innerHTML = getStarRating(2);
   </script>
 
 </body>

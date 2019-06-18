@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Atos - Deliverino</title>
+
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="shortcut icon" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/flaticon.css" />
+  <link rel="stylesheet" href="css/owl.carousel.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animate.css" />
+
+</head>
+
+<body onload="load_single_restaurant_menu('Frans')">
+    
+    <header style="background-color: black">
+        <div class="header-warp">
+          <div class="site-logo">
+            <h2>
+              <a style="color : white" href="index_en.html">Deliverino<span>.</span></a>
+            </h2>
+          </div>
+          <!-- responsive -->
+          <div class="nav-switch">
+            <i class="fa fa-bars"></i>
+          </div>
+          <!-- menu -->
+          <ul class="main-menu">
+            <li><a href="index_en.html" class="">Home</a></li>
+            <li><a href="about_en.html">About Us</a></li>
+            <li>
+                <a class="btn dropdown-toggle" href="#" role="button" id="language_picker" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Restaurants
+                </a>
+        
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" style="color:black; margin:0" href="restaurants_en.html">All restaurants</a>
+                    <a class="dropdown-item" style="color:black; margin:0" href="restaurants_nbg_en.html">Novi Beograd</a>
+                    <a class="dropdown-item" style="color:black; margin:0" href="restaurants_zmn_en.html">Zemun</a>
+                    <a class="dropdown-item" style="color:black; margin:0" href="restaurants_zve_en.html">Zvezdara</a>
+                    <a class="dropdown-item" style="color:black; margin:0" href="restaurants_stg_en.html">Stari Grad</a>
+                    <a class="dropdown-item" style="color:black; margin:0" href="restaurants_vrc_en.html">Vracar</a>
+                </div>
+            </li>
+            <li><a href="delivery_en.html" class = "active">Delivery</a></li>
+            <li><a href="my_orders_en.html">My Orders</a></li>
+            <li>
+              <a class="btn dropdown-toggle" href="#" role="button"
+                id="language_picker" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                Language
+              </a>
+  
+              <div class="dropdown-menu">
+                <a class="dropdown-item" style="color:black; margin:0" href="#">English</a>
+                <a class="dropdown-item" style="color:black; margin:0"
+                  href="frans_menu.html">Serbian</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+  <!-- Bread crumbs -->
+  <div class="row-fluid">
+    <div class="offset-sm-2 col-sm-6" style="padding-top: 20px">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-white">
+          <li class="breadcrumb-item"><a style="color:black" href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a style="color:black" href="restaurants.html">Delivery</a></li>
+          <li class="breadcrumb-item" style="color:#ffc515" aria-current="page" id="bc_restaurant"></li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <!-- Bread crumbs over -->
+
+
+  <!-- Page info section -->
+  <section class="page-top-info set-bg" data-setbg="img/page-top-bg/2.jpg">
+    <div class="ptf-center">
+      <div class="container">
+        <h2 id="rest_name"></h2>
+      </div>
+    </div>
+  </section>
+  <!-- Page info section end -->
+
+  <!-- Menu section -->
+  <section class="menu-section spad set-bg" data-setbg="img/menu-bg.jpg" id="menu">
+    
+  
+  </section>
+  <!-- Menu section end -->
+
+  <!-- Footer section -->
+  <footer class="footer-section">
+    <div class="footer-bg-area set-bg" data-setbg="img/footer-bg.jpg">
+      <div class="copyright">
+        <p>
+          Copyright
+          <br />
+          2019
+          <br />
+          Nenad Bauk and Marko Stefanovic
+          <br />
+          Odsek za softversko inzenjerstvo Elektrotehnickog fakulteta
+          <br />
+          Univerziteta u Beogradu
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer section end -->
+
+  <!--====== Javascripts & Jquery ======-->
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/circle-progress.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
